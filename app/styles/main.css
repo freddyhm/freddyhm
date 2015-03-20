@@ -1,24 +1,9 @@
 body {
-  background: #fafafa;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #333;
+
 }
 
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 300px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 60px;
-}
-
-.hero-unit h1 {
-  font-size: 60px;
-  line-height: 1;
-  letter-spacing: -1px;
+* {
+  box-sizing: border-box;
 }
 
 .browsehappy {
@@ -27,3 +12,74 @@ body {
   color: #000;
   padding: 0.2em 0;
 }
+
+
+/* -- clearfix -- */
+
+.row:before,
+.row:after{
+  content: "";
+  display:table;
+  clear:both;
+}
+
+
+[class*='col-']{
+  float:left;
+  min-height: 1px;
+  width: 16.66%;
+  /*-- our gutter --*/
+  padding:12px;
+  background-color: #FFDCDC;
+}
+
+.col-1 { width: 16.66%;} 
+.col-2 { width: 33.33%;} 
+.col-3 { width: 50%;}
+.col-4 { width: 66.66%;} 
+.col-5 { width: 83.33%;} 
+.col-6 { width: 100%;} 
+
+.outline, .outline *{
+  outline: 1px solid #F6A1A1;
+}
+
+[class*='col-'] > p {
+  background-color: #FFC2C2;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  color: white;
+}
+
+@media all and (max-width:1024px){
+
+  .col-1{ width: 33.33%;}
+  .col-2{ width: 50%;}
+  .col-3{ width: 50%;}
+  .col-4{ width: 100%;}
+  .col-5{ width: 100%;}
+  .col-6{ width: 100%;}
+
+  .row .col-2:last-of-type{
+    width: 100%;
+  }
+
+  .row .col-5 ~ .col-1{
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 650px){
+
+  .col-1{ width: 50%;}
+  .col-2{ width: 100%;}
+  .col-3{ width: 100%;}
+  .col-4{ width: 100%;}
+  .col-5{ width: 100%;}
+  .col-6{ width: 100%;}
+
+}
+
+
+
