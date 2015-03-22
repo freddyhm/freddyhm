@@ -126,10 +126,12 @@ header[class=nav-top] li{
 
 .main-col-6-1{
   background-color: #B81D18;
+  position: relative;
+  z-index: -1;
 }
 
 .module-intro{
-
+  position: fixed;
 }
 
 /* ---------->>> WORK  <<<-----------*/
@@ -141,13 +143,22 @@ header[class=nav-top] li{
 /* gallery slider */
 
 .module-content-work{
-  overflow: hidden;
+  overflow: scroll;
 }
 
-#gallery-work {
+.gallery-work {
     width: 1220px;
     left:-20px;
     position: relative;
+}
+
+.work-thumb-list{
+  float: left;
+}
+
+.work-thumb-list img{
+  width: 70px;
+  height: 70px;
 }
 
 

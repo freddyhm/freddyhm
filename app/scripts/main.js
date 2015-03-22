@@ -1,5 +1,36 @@
  window.onload = function(){
 
+ 	var projects = {	'teamstory' : ['tspic1.jpg', 'tspic2.jpg', 'tspic3.jpg'],
+ 						'oneshop' : ['onepic1.jpg', 'onepic2.jpg', 'onepic3.jpg'],
+ 						'tablets' : ['tabpic1.jpg', 'tabpic2.jpg', 'tabpic3.jpg']
+ 					};
+ 	
+ 	var workThumbs = document.getElementsByClassName("work-thumb-item");
+ 	var galleryItems = document.getElementsByClassName("gallery-items");
+
+ 	for(var i = 0; i < workThumbs.length; i++){
+ 		
+ 		var workThumb = workThumbs[i];
+ 		
+ 		workThumb.onclick = function(){
+ 			if(this.id === "work-thumb-teamstory"){
+ 				switchImages("teamstory");
+ 			}else if(this.id === "work-thumb-oneshop"){
+ 				switchImages("oneshop");
+ 			}else if(this.id === "work-thumb-tablets"){
+ 				switchImages("tablets");
+ 			}
+ 		};
+ 	}
+
+ 	function switchImages(projectName){
+ 		if(typeof projectName === 'string' || projectName instanceof String){
+ 			for(var i = 0; i < galleryItems.length; i++){
+ 				galleryItems[i].firstElementChild.src = projects[projectName][i];
+ 			}
+ 		}
+ 	}
+
  	// add show/hide classes to element
  	function toggleVisibility(elem){
  		if(elem){
@@ -23,6 +54,7 @@
 	}, false);
 
 
+
 	(function(){
 
 		/* Custom Slider */
@@ -43,7 +75,7 @@
 		    startY = touchObj.pageY;
 		    startTime = new Date().getTime();
 		}, false);
-		
+
 
 		/*
 		gallery.addEventListener('touchend', function(event){
