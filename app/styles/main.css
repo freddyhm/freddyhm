@@ -8,7 +8,12 @@ ul {
   padding:0;
 }
 
-li{ display: inline; }
+li{ display: inline-block; }
+
+a{
+  color:white;
+  text-decoration: none;
+}
 
 /* ---------->>> lAYOUT <<<-----------*/
 
@@ -46,10 +51,10 @@ li{ display: inline; }
 .col-5 { width: 83.33%;} 
 .col-6 { width: 100%;} 
 
-.outline, .outline *{ outline: 1px solid #F6A1A1; }
+/*.outline, .outline *{ outline: 1px solid #F6A1A1; } */
 
 [class*='col-'] > * {
-  background-color: #FFC2C2;
+  /* background-color: #FFC2C2; */
   padding: 0;
   margin: 0;
   text-align: center;
@@ -73,27 +78,94 @@ li{ display: inline; }
 
 /* ---------->>> MAIN HEADER <<<-----------*/
 
-.nav-primary > ul{ float:right; }
+header[class=nav-top]{
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+
+.logo{
+  float: left;
+  display: block;
+  font-size: 18px;
+  margin-top: 10px;
+  border: 1px solid white;
+  padding: 11px 5px 5px 5px;
+  margin-left: 15px;
+}
+
+header[class=nav-top] > nav{ 
+  float: right;
+  width: 73%;
+  margin-top: 10px;
+}
+
+header[class=nav-top] li{
+  margin-right: 9%;
+}
+
+.is-nav-visible{
+  display: inline;
+}
+
+.is-nav-hidden{
+  display: none;
+}
+
+
+
+
+/* ---------->>> MODULES <<<-----------*/
+
+.module{
+  position: relative;
+  top:100px;
+}
 
 /* ---------->>> INTRO <<<-----------*/
 
+.main-col-6-1{
+  background-color: #B81D18;
+}
+
 .module-intro{
-  background-color: red;
-  top: 100px;
-  position: relative;
+
 }
 
 /* ---------->>> WORK  <<<-----------*/
 
-.module-work{ background-color: green; }
+.main-col-6-2{
+  background-color: #202020;
+}
+
+/* gallery slider */
+
+.module-content-work{
+  overflow: hidden;
+}
+
+#gallery-work {
+    width: 1220px;
+    left:-20px;
+    position: relative;
+}
+
 
 /* ---------->>> EXPERIMENTS <<<-----------*/
 
-.module-experiments{ background-color: purple; }
+.main-col-6-3{
+  background-color: #004687;
+}
+
+.module-experiments{ }
 
 /* ---------->>> BLOG  <<<-----------*/
 
-.module-blog{ background-color: yellow; }
+.main-col-6-4{
+  background-color: #428F89;
+}
+
+.module-blog{ }
 
 .posts li{
   display:block;

@@ -6,6 +6,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
@@ -24,22 +25,29 @@
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
-
     <div class="grid-container outline">
       <!-- Top Nav -->
-      <div class="row nav-bar">
-          <header>
-            <nav class="nav-primary">
-              <div class="col-2">
-                <img src="one.jpg" />
-              </div>
-               <ul class="col-4">
-                  <li>Work</li>
-                  <li>Experiments</li> 
-                  <li>Blog</li>
-                  <li>Contact</li>
-                </ul>
+      <div class="row">
+          <header class="nav-top">
+            <a class="logo" href="javascript:;">FHM</a>
+            <nav class="nav-list is-nav-hidden">
+              <li>
+                <a href="">
+                  <span class="fa fa-suitcase fa-fw fa-2x"></span>
+                </a>
+              </li> 
+              <li>
+                <a href="">
+                  <span class="fa fa-lightbulb-o fa-fw fa-2x"></span>
+                </a>
+              </li> 
+              <li>
+                <a href=""><span class="fa fa-pencil fa-fw fa-2x"></span></a>
+              </li> 
+              <li>
+                <a href=""><span class="fa fa-envelope-o fa-fw fa-2x"></span></a>
+              </li> 
+              </ul>
             </nav>
           </header>
       </div> 
@@ -48,16 +56,25 @@
           <!-- Intro Module -->
           <section class="module module-intro">
             <header>
-              <h1>Hello, my name is Freddy</h1>
+              <h1>Freddy Hidalgo-Monchez</h1>
+              <h2>Coding The Future</h2>
             </header>
-            <h2>I am a human being</h2>
-            <div class="">Contact Me</div>
+            <p>I'm a web & mobile developer based out Vancouver, Canada.</p>
+            <a href="#contact" class="button">Contact Me</a>
             <!-- Main Nav -->
             <nav class="nav-secondary">
               <ul class="">
-                <li>Work</li> 
-                <li>Experiments</li>
-                <li>Blog</li>
+                <li>
+                  <a href="">
+                    <span class="fa fa-suitcase fa-fw fa-4x"></span>
+                  </a>
+                </li> 
+                <li>
+                  <a href="">
+                    <span class="fa fa-lightbulb-o fa-fw fa-4x"></span>
+                  </a>
+                </li> 
+                <li><a href=""><span class="fa fa-pencil fa-fw fa-4x"></span></a></li> 
               </ul>
             </nav>
           </section>
@@ -68,24 +85,27 @@
           <!-- Work Module -->
           <section class="module module-work">
             <header>
-              <h1>Work</h1>
+              <span class="fa fa-suitcase fa-fw fa-4x"></span>
             </header>
             <!-- Work Gallery -->
-            <div class="">
-              <ul class="gallery">
-                <li>picture 1</li>
-                <li>picture 2</li>
-                <li>picture 3</li>
+            <div class="module-content module-content-work">
+              <ul id="gallery-work" class="gallery gallery-work">
+                <li>
+                   <img src="http://dribbble.s3.amazonaws.com/users/322/screenshots/872485/coldchase.jpg">
+                </li>
+                <li>
+                  <img src="http://dribbble.s3.amazonaws.com/users/322/screenshots/980517/icehut_sm.jpg" alt="Project 1 Picture 2" />
+                </li>
+                <li>
+                  <img src="http://dribbble.s3.amazonaws.com/users/322/screenshots/943660/hq_sm.jpg" alt="Project 1 Picture 3" />
+                </li>
               </ul>
             </div> 
-            <div class="">
-              <p>progress indicator</p>
-            </div>
             <!-- Work Projects -->
             <ul>
-                <li>project 1</li>
-                <li>project 2</li>
-                <li>project 3</li>
+                <li><a href="">P1</a></li>
+                <li><a href="">P2</a></li>
+                <li><a href="">P3</a></li>
             </ul>
           </section>
         </div>
@@ -95,10 +115,12 @@
           <!-- Experiment Module -->
           <section class="module module-experiments">
             <header>
-              <h1>Experiments</h1>
+              <span class="fa fa-lightbulb-o fa-fw fa-4x"></span>
             </header>
             <!-- Experiments -->
-            <div class=""><p>experiment1</p></div>
+            <div class="">
+              <a href=""><img src="f" alt="Experiment 1" /></a>
+            </div>
           </section>
         </div>
       </div>
@@ -107,13 +129,13 @@
             <!-- Blog Module -->
             <section class="module module-blog">
               <header>
-                <h1>Blog</h1>
+                <span class="fa fa-pencil fa-fw fa-4x"></span>
               </header>
               <!-- Blog Posts -->
               <ul class="posts">
-                <li>post 1</li>
-                <li>post 2</li>
-                <li>post 3</li>
+                <li><a href="">post 1</a></li>
+                <li><a href="">post 2</a></li>
+                <li><a href="">post 3</a></li>
               </ul>
             </section>
           </div>
