@@ -19,6 +19,10 @@ ul{
   list-style-type: none;
 }
 
+img{
+  max-width: 100%;
+}
+
 /* -----------------------------------------------
   :: HEADER
   --------------------------------------------- */
@@ -339,18 +343,31 @@ header h1{
 /* -----------------------------------------------
   :: WORK MODULE
   --------------------------------------------- */
+
+.work-module{
+  overflow-x: hidden;
+}
+
+
+.work-container{
+  width: 200%;
+}
   
+
+/* WORK THUMBS */
+
 .work-list{
-  width: 100%;
+  width: 50%;
   margin-top: 65px;
   overflow-y: auto;
+  float:left;
+  transition: transform 2s ease;
+  transform: translateX(-100%);
 }
 
-.work-list.active{
-  transform: translateY(-9999px);
+.work-list.hide{
+  transform: translateX(-100%);
 }
-
-
 
 .work-item{
   width: 50%;
@@ -364,7 +381,6 @@ header h1{
   width: 100%;
   max-width: 600px;;
 }
-
 
 .work-overlay{
   width: 100%;
@@ -395,6 +411,46 @@ header h1{
   transform: scale(1, 1);
 
 }
+
+/* WORK DESCRIPTION */ 
+
+.work-desc{
+  width: 50%;
+  float:right;
+  transition: transform 2s ease;
+  transform: translateX(-100%);
+}
+
+.desc-btn-back{
+  display: inline-block;
+  float: left;
+}
+
+.desc-btn-back svg{
+  width: 48px;
+  height: 48px;
+}
+
+.work-desc-title{
+  width: 80%;
+  float: left;
+  margin: 0 0 40px 0;
+}
+
+.work-desc-list{
+  clear:both;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.work-desc.active{
+  transform: translateX(-100%);
+}
+
+
+
+
 
 
 
