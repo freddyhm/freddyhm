@@ -17,7 +17,7 @@ The difference:
   <li>My own code</li>
   <li>Mobile-first approach</li>
   <li>Use <a href="devtips.github.io/Artists-Theme/" alt="Artist Theme">live site</a> as mockup instead of PSD</li> 
-  <li>Started with <a href="https://github.com/yeoman/yeoman" alt="Git Hub Yeoman Repo">Yeoman</a> but compiling was too slow, using only <a href="https://github.com/h5bp/html5-boilerplate" alt="Git Hub HTML5 Boilerplate">html5 boilerplate</a> instead</li>
+  <li>Started with <a href="https://github.com/yeoman/yeoman" alt="Git Hub Yeoman Repo">Yeoman</a> but found problems with setting it up so starting with<a href="https://github.com/h5bp/html5-boilerplate" alt="Git Hub HTML5 Boilerplate">html5 boilerplate</a>only instead</li>
   <li>My face and stuff</li>
   </ul>
 

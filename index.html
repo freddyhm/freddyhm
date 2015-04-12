@@ -12,6 +12,7 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/custom.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
@@ -161,17 +162,17 @@
             </li>
           </ul>
         </section>
-        <section class="module work-module">
+         <section class="module work-module">
           <h1 class="module-title work-title">Work</h1>
           <ul class="work-list">
-            <li class="work-item"><img src="img/work/proj-1/thumb.jpg" alt=""><span class="work-overlay">YOOOOOOO</span></li>
-            <li class="work-item"><img src="img/work/proj-1/thumb.jpg" alt=""><span class="work-overlay">YOOOOOOO</span></li>
-            <li class="work-item"><img src="img/work/proj-1/thumb.jpg" alt=""><span class="work-overlay">YOOOOOOO</span></li>
-            <li class="work-item"><img src="img/work/proj-1/thumb.jpg" alt=""><span class="work-overlay">YOOOOOOO</span></li>
-            <li class="work-item"><img src="img/work/proj-1/thumb.jpg" alt=""><span class="work-overlay">YOOOOOOO</span></li>
-            <li class="work-item"><img src="img/work/proj-1/thumb.jpg" alt=""><span class="work-overlay">YOOOOOOO</span></li>
-            <li class="work-item"><img src="img/work/proj-1/thumb.jpg" alt=""><span class="work-overlay">YOOOOOOO</span></li>
-            <li class="work-item"><img src="img/work/proj-1/thumb.jpg" alt=""><span class="work-overlay">YOOOOOOO</span></li>
+            <li class="work-item"><img src="img/work/proj-1/thumb.jpg" alt=""><div class="work-overlay"><span class="work-overlay-title">Typo International Design Talk</span></li>
+            <li class="work-item"><img src="img/work/proj-2/thumb.jpg" alt=""><div class="work-overlay"><span class="work-overlay-title">City-In Website Concept</span></div></li>
+            <li class="work-item"><img src="img/work/proj-3/thumb.jpg" alt=""><div class="work-overlay"><span class="work-overlay-title">Crispy Icons</span></div></li>
+            <li class="work-item"><img src="img/work/proj-4/thumb.jpg" alt=""><div class="work-overlay"><span class="work-overlay-title">Flat Mobile UI/UX Concept</span></div></li>
+            <li class="work-item"><img src="img/work/proj-5/thumb.jpg" alt=""><div class="work-overlay"><span class="work-overlay-title">Fresh It Up</span></div></li>
+            <li class="work-item"><img src="img/work/proj-6/thumb.jpg" alt=""><div class="work-overlay"><span class="work-overlay-title">Timeline Page</span></div></li>
+            <li class="work-item"><img src="img/work/proj-7/thumb.jpg" alt=""><div class="work-overlay"><span class="work-overlay-title">Weather Dashboard</span></div></li>
+            <li class="work-item"><img src="img/work/proj-8/thumb.jpg" alt=""><div class="work-overlay"><span class="work-overlay-title">Stripes & Co</span></div></li>
           </ul>
         </section>
         <section class="module client-module">
@@ -272,23 +273,27 @@
 
         <script>
           /*
-           * Open the drawer when the menu ison is clicked.
+           * Show 
            */
-          var menu = document.querySelector('.work-item');
-          var drawer = document.querySelector('.work-overlay');
+          var workItems = document.querySelectorAll('.work-item');
 
-          $(".work-item").hover(function() {
-            /* Stuff to do when the mouse enters the element */
+          for (var i = 0; i < workItems.length; i++) { 
+            workItems[i].addEventListener('mouseover', function() {
+              for (var i = 0; i < this.childNodes.length; i++) {
+                if(this.childNodes[i].className === "work-overlay"){
+                    this.childNodes[i].classList.toggle("over");
+                }
+              }
+            });
 
-            
-            $(this).children('.work-overlay').addClass('on');
-
-            
-          }, function() {
-            /* Stuff to do when the mouse leaves the element */
-            $(this).children('.work-overlay').removeClass('on');
-          });
-
+            workItems[i].addEventListener('mouseleave', function() {
+              for (var i = 0; i < this.childNodes.length; i++) {
+                if(this.childNodes[i].classList.contains("over")){
+                    this.childNodes[i].classList.remove("over");
+                }
+              }
+            });
+          };
       
         </script>
     </body>

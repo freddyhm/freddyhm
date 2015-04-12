@@ -2,28 +2,10 @@
   :: GLOBAL
   --------------------------------------------- */
 
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Open Sans Light'), local('OpenSans-Light'), url(//themes.googleusercontent.com/static/fonts/opensans/v8/DXI1ORHCpsQm3Vp6mXoaTaRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
-}
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Open Sans'), local('OpenSans'), url(//themes.googleusercontent.com/static/fonts/opensans/v8/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
-}
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(//themes.googleusercontent.com/static/fonts/opensans/v8/k3k702ZOKiLJc3WVjuplzKRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
-}
-
 body {
   font-family: 'Open Sans', sans-serif;
   color: #666;
+  -webkit-font-smoothing: antialiased;
 }
 
 a{
@@ -364,6 +346,12 @@ header h1{
   overflow-y: auto;
 }
 
+.work-list.active{
+  transform: translateY(-9999px);
+}
+
+
+
 .work-item{
   width: 50%;
   display: inline;
@@ -381,19 +369,31 @@ header h1{
 .work-overlay{
   width: 100%;
   height: 100%;
-  display: inline-block;
-  background-color: rgba(40,22,80,0.5);
+  background-color: rgba(201, 144, 101, 0.9);
   position: absolute;
-  color: red;
-  text-align: center;
   left: 0;
-  /* Optionally, we animate the drawer. */
+  top: 0;
+  text-align: center;
+  z-index: 10;
   transition: transform 0.2s ease;
   transform: scale(0, 0);
 }
 
-.work-overlay.on{
+.work-overlay-title{
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  color: #fff;
+  line-height: 1.2;
+  font-weight: 300;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.work-overlay.over{
   transform: scale(1, 1);
+
 }
 
 
