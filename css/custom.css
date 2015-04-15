@@ -414,34 +414,40 @@ header h1{
 
 /* WORK DESCRIPTION */ 
 
-.work-desc{
+.work-wrap{
   width: 50%;
   float:right;
   transition: transform 2s ease;
   transform: translateX(-100%);
 }
 
+.work-desc{
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
 .desc-btn-back{
   display: inline-block;
   float: left;
+  position: absolute;
+  left: 4px;
 }
 
 .desc-btn-back svg{
   width: 48px;
   height: 48px;
+  margin-left: -4px;
+}
+
+.desc-btn-back path{
+  fill: rgba(0, 0, 0, 0.4);
 }
 
 .work-desc-title{
   width: 80%;
   float: left;
-  margin: 0 0 40px 0;
-}
-
-.work-desc-list{
-  clear:both;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 0 15px;
+  margin: 0 0 40px 60px;
 }
 
 .work-desc.active{
