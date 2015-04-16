@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="eng">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -167,14 +167,14 @@
           <div class="work-container">
             <div class="work-list-wrap">
               <ul class="work-list">
-                <li class="work-item"><img src="img/work/proj-1/thumb.jpg" alt=""><div class="work-overlay"><span class="work-overlay-title">Typo International Design Talk</span></li>
-                <li class="work-item"><img src="img/work/proj-2/thumb.jpg" alt=""><div class="work-overlay"><span class="work-overlay-title">City-In Website Concept</span></div></li>
-                <li class="work-item"><img src="img/work/proj-3/thumb.jpg" alt=""><div class="work-overlay"><span class="work-overlay-title">Crispy Icons</span></div></li>
-                <li class="work-item"><img src="img/work/proj-4/thumb.jpg" alt=""><div class="work-overlay"><span class="work-overlay-title">Flat Mobile UI/UX Concept</span></div></li>
-                <li class="work-item"><img src="img/work/proj-5/thumb.jpg" alt=""><div class="work-overlay"><span class="work-overlay-title">Fresh It Up</span></div></li>
-                <li class="work-item"><img src="img/work/proj-6/thumb.jpg" alt=""><div class="work-overlay"><span class="work-overlay-title">Timeline Page</span></div></li>
-                <li class="work-item"><img src="img/work/proj-7/thumb.jpg" alt=""><div class="work-overlay"><span class="work-overlay-title">Weather Dashboard</span></div></li>
-                <li class="work-item"><img src="img/work/proj-8/thumb.jpg" alt=""><div class="work-overlay"><span class="work-overlay-title">Stripes & Co</span></div></li>
+                <li class="work-item" data-folder="proj-1"><img src="img/work/proj-1/thumb.jpg" alt=""><div class="work-overlay"><span class="work-overlay-title">Typo International Design Talk</span></li>
+                <li class="work-item" data-folder="proj-2"><img src="img/work/proj-2/thumb.jpg" alt=""><div class="work-overlay"><span class="work-overlay-title">City-In Website Concept</span></div></li>
+                <li class="work-item" data-folder="proj-3"><img src="img/work/proj-3/thumb.jpg" alt=""><div class="work-overlay"><span class="work-overlay-title">Crispy Icons</span></div></li>
+                <li class="work-item" data-folder="proj-4"><img src="img/work/proj-4/thumb.jpg" alt=""><div class="work-overlay"><span class="work-overlay-title">Flat Mobile UI/UX Concept</span></div></li>
+                <li class="work-item" data-folder="proj-5"><img src="img/work/proj-5/thumb.jpg" alt=""><div class="work-overlay"><span class="work-overlay-title">Fresh It Up</span></div></li>
+                <li class="work-item" data-folder="proj-6"><img src="img/work/proj-6/thumb.jpg" alt=""><div class="work-overlay"><span class="work-overlay-title">Timeline Page</span></div></li>
+                <li class="work-item" data-folder="proj-7"><img src="img/work/proj-7/thumb.jpg" alt=""><div class="work-overlay"><span class="work-overlay-title">Weather Dashboard</span></div></li>
+                <li class="work-item" data-folder="proj-8"><img src="img/work/proj-8/thumb.jpg" alt=""><div class="work-overlay"><span class="work-overlay-title">Stripes & Co</span></div></li>
               </ul>
             </div>
             <div class="work-desc-wrap">
@@ -182,14 +182,8 @@
                 <span class="desc-btn-back">
                   <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 40 40"><path d="M22.896 29.125c-.256 0-.512-.098-.707-.293l-8.125-8.125c-.391-.391-.391-1.023 0-1.414l8.125-8.125c.391-.391 1.023-.391 1.414 0s.391 1.023 0 1.414l-7.418 7.418 7.417 7.418c.391.391.391 1.023 0 1.414-.195.195-.451.293-.706.293zM20 6c7.72 0 14 6.28 14 14s-6.28 14-14 14-14-6.28-14-14 6.28-14 14-14m0-2c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16z"></path></svg>
                 </span>
-                <h2 class="work-desc-title">TYPO</h2>
-                <div class="work-load">
-                  <ul class="work-desc-list">
-                    <li class="work-desc-item"><img src="img/work/proj-2/CityIn-AntonSkvortsov.jpg" alt=""></li>
-                    <li class="work-desc-item"><img src="img/work/proj-2/CityIn-AntonSkvortsov.jpg" alt=""></li>
-                    <li class="work-desc-item"><img src="img/work/proj-2/CityIn-AntonSkvortsov.jpg" alt=""></li>
-                  </ul>
-                </div>
+                <h2 class="work-desc-title"></h2>
+                <div class="work-load"></div>
               </div>
             </div>
           </div>
@@ -288,45 +282,6 @@
             e.src='https://www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-        </script>
-
-        <script>
-          /*
-           * Show 
-           */
-          var workItems = document.querySelectorAll('.work-item');
-
-          // write in plain javascript
-          $('.work-item').click(function(event) {
-            $('.work-list-wrap').addClass("hide");
-            $('.work-desc-wrap').addClass("active");
-            $('.desc-btn-back').addClass("active");
-          });
-
-          $('.desc-btn-back').click(function(event) {
-            $('.work-list-wrap').removeClass("hide");
-            $('.work-desc-wrap').removeClass("active");
-            $('.desc-btn-back').removeClass("active");
-          });
-
-          for (var i = 0; i < workItems.length; i++) { 
-
-            // add hover effect for all items in our work list
-            workItems[i].addEventListener('mouseover', function() {
-              for (var i = 0; i < this.childNodes.length; i++) {
-                if(this.childNodes[i].className === "work-overlay"){
-                    this.childNodes[i].classList.toggle("over");
-                }
-              }
-            });
-            workItems[i].addEventListener('mouseleave', function() {
-              for (var i = 0; i < this.childNodes.length; i++) {
-                if(this.childNodes[i].classList.contains("over")){
-                    this.childNodes[i].classList.remove("over");
-                }
-              }
-            });
-          }
         </script>
     </body>
 </html>

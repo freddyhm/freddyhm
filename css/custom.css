@@ -152,7 +152,6 @@ header h1{
 
 .module{
   padding-bottom: 100px;
-  padding-top: 59px;
 }
 
 .module:nth-of-type(2n){
@@ -164,6 +163,7 @@ header h1{
   text-transform: uppercase;
   font-size: 14px;
   color: #e1c285;
+  padding: 50px 0;
 }
 
 /* -----------------------------------------------
@@ -361,13 +361,12 @@ header h1{
   overflow-y: auto;
 }
 
-.work-list{
-  max-width: 960px;
-  margin-top: 65px;
-}
-
 .work-list-wrap.hide{
   transform: translateX(-100%);
+}
+
+.work-list{
+  max-width: 960px;
 }
 
 .work-item{
@@ -396,6 +395,10 @@ header h1{
   transform: scale(0, 0);
 }
 
+.work-overlay.over{
+  transform: scale(1, 1);
+}
+
 .work-overlay-title{
   position: relative;
   display: inline-block;
@@ -408,24 +411,29 @@ header h1{
   transform: translateY(-50%);
 }
 
-.work-overlay.over{
-  transform: scale(1, 1);
-
-}
-
 /* WORK DESCRIPTION */ 
 
 .work-desc-wrap{
   width: 50%;
   float:right;
-  transition: transform 1s ease;
   position: relative;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: transform 1s ease, opacity 2s ease, max-height 1s linear;
+}
+
+.work-desc-wrap.active{
+  opacity: 1;
+  max-height: 1000em;
+  transform: translateX(-100%);
 }
 
 .work-desc{
   max-width: 600px;
   margin: 0 auto;
   padding: 0 15px;
+  position: relative;
 }
 
 .desc-btn-back{
@@ -452,13 +460,13 @@ header h1{
 }
 
 .work-desc-title{
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 28px; 
+  color: #c99065;
   width: 80%;
   float: left;
   margin: 0 0 40px 60px;
-}
-
-.work-desc-wrap.active{
-  transform: translateX(-100%);
 }
 
 /* -----------
@@ -477,6 +485,15 @@ header h1{
   .work-item{
     width: 25%;
   }
+
+  .desc-btn-back{
+    left: -60px;
+  }
+  
+  .work-desc-title{
+    margin-left: 0px;
+  }
+
 }
 
 
