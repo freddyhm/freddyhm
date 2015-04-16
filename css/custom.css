@@ -348,24 +348,25 @@ header h1{
   overflow-x: hidden;
 }
 
-
 .work-container{
   width: 200%;
 }
   
-
 /* WORK THUMBS */
 
-.work-list{
+.work-list-wrap{
   width: 50%;
-  margin-top: 65px;
-  overflow-y: auto;
   float:left;
-  transition: transform 2s ease;
-  transform: translateX(-100%);
+  transition: transform 1s ease;
+  overflow-y: auto;
 }
 
-.work-list.hide{
+.work-list{
+  max-width: 960px;
+  margin-top: 65px;
+}
+
+.work-list-wrap.hide{
   transform: translateX(-100%);
 }
 
@@ -414,11 +415,11 @@ header h1{
 
 /* WORK DESCRIPTION */ 
 
-.work-wrap{
+.work-desc-wrap{
   width: 50%;
   float:right;
-  transition: transform 2s ease;
-  transform: translateX(-100%);
+  transition: transform 1s ease;
+  position: relative;
 }
 
 .work-desc{
@@ -432,6 +433,12 @@ header h1{
   float: left;
   position: absolute;
   left: 4px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.desc-btn-back:hover{
+  opacity: 1;
 }
 
 .desc-btn-back svg{
@@ -450,8 +457,26 @@ header h1{
   margin: 0 0 40px 60px;
 }
 
-.work-desc.active{
+.work-desc-wrap.active{
   transform: translateX(-100%);
+}
+
+/* -----------
+  :: Desktop
+  ---------- */
+
+@media screen and (min-width: 760px){
+  
+  /* WORK THUMBS */
+
+  .work-list{
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  .work-item{
+    width: 25%;
+  }
 }
 
 
