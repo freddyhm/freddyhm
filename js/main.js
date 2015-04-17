@@ -52,3 +52,20 @@ function loadWorkDetails(projID, projTitle){
   $('.work-desc-title').text(projTitle);
   $('.work-load').load(htmlURL);
 }
+
+
+
+$('.client-nav-item').click(function(event) {
+  
+  // remove active nav item and current client  
+  $('.client-nav-item').removeClass('active')
+  $('.client-item').removeClass('active');
+  
+  // add new active nav and new client  
+  var clientNum = $(this).data("client");
+  $('.client-nav-item').filter("[data-client='" + clientNum + "']").addClass('active');
+  $('.client-item').filter("[data-client='" + clientNum + "']").addClass('active');
+});
+
+
+
