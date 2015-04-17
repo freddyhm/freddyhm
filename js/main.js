@@ -93,8 +93,10 @@ $(function(){
 
   function prevClient(){
 
+    // decrement counter
     clientIndex--;
 
+    // reset index to last client if index falls to negative
     if(clientIndex < 0){
       clientIndex = clientItems.length - 1;
     }
@@ -104,8 +106,10 @@ $(function(){
 
   function nextClient(){
 
-     clientIndex++;
+    // increment counter
+    clientIndex++;
 
+    // reset index to first client if index goes over client count
     if(clientIndex > (clientItems.length - 1)){
       clientIndex = 0;
     }
