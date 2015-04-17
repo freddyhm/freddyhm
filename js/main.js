@@ -53,19 +53,67 @@ function loadWorkDetails(projID, projTitle){
   $('.work-load').load(htmlURL);
 }
 
-
+var clientItems =  $(".client-item").map(function(){ return $(this).data("client"); }).get(),  
+    clientIndex = 0;
 
 $('.client-nav-item').click(function(event) {
   
   // remove active nav item and current client  
-  $('.client-nav-item').removeClass('active')
+  $('.client-nav-item').removeClass('active');
   $('.client-item').removeClass('active');
   
   // add new active nav and new client  
-  var clientNum = $(this).data("client");
-  $('.client-nav-item').filter("[data-client='" + clientNum + "']").addClass('active');
-  $('.client-item').filter("[data-client='" + clientNum + "']").addClass('active');
+  var client = $(this).data("client");
+  $('.client-nav-item').filter("[data-client='" + client + "']").addClass('active');
+  $('.client-item').filter("[data-client='" + client + "']").addClass('active');
 });
+
+$('.control-prev').click(function(event) {
+  
+  // remove current client  
+  $('.client-logo-item').removeClass('active');
+  $('.client-item').removeClass('active');
+  
+  // get previous client and show
+  var client = prevClient();
+  $('.client-logo-item').filter("[data-client='" + client + "']").addClass('active');
+  $('.client-item').filter("[data-client='" + client + "']").addClass('active');
+});
+
+$('.control-next').click(function(event) {
+
+  // remove current client 
+  $('.client-logo-item').removeClass('active');
+  $('.client-item').removeClass('active');
+  
+  // get next client and show
+  var client = nextClient();
+  $('.client-logo-item').filter("[data-client='" + client + "']").addClass('active');
+  $('.client-item').filter("[data-client='" + client + "']").addClass('active');
+});
+
+function prevClient(){
+
+  clientIndex--;
+
+  if(clientIndex < 0){
+    clientIndex = clientItems.length - 1;
+  }
+
+  return clientItems[clientIndex];;
+}
+
+function nextClient(){
+
+   clientIndex++;
+
+  if(clientIndex > (clientItems.length - 1)){
+    clientIndex = 0;
+  }
+
+  return clientItems[clientIndex];;
+}
+
 
 
 

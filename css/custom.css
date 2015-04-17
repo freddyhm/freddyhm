@@ -140,6 +140,10 @@ header h1{
   :: MODULES
   --------------------------------------------- */
 
+  /* ------------
+  :: Mobile
+  ---------- */
+
 /* clear fix hack to contain floats and margins */ 
 .module:before, .module:after{
   content: "";
@@ -169,6 +173,10 @@ header h1{
 /* -----------------------------------------------
   :: ABOUT MODULE
   --------------------------------------------- */
+
+  /* ------------
+  :: Mobile
+  ---------- */
 
 .about-pic{
   display: block;
@@ -500,10 +508,14 @@ header h1{
   :: CLIENTS MODULE
   --------------------------------------------- */
 
+/* ------------
+:: Mobile
+---------- */
+
 /* NAV */
 
-.client-title{
-
+.client-nav-control{
+  display: none;
 }
 
 .client-nav-list{
@@ -569,6 +581,8 @@ header h1{
 
 .client-quote{
   position: relative;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .client-quote-mark{
@@ -595,6 +609,114 @@ header h1{
   font-weight: 100;
 }
 
+/* CLIENT LOGOS */
+
+.client-logo-list{
+  display: none;
+}
+
+
+/* -----------
+  :: Desktop
+  ---------- */
+
+@media screen and (min-width:760px){
+
+  .client-module{
+    position: relative;
+  }
+
+  /* NAV CONTROLS */
+
+  .client-nav-list{
+    display: none;
+  }
+
+  .client-nav-control{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .client-control{
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+  }
+  
+  .client-control svg{
+    width: 40px;
+    height: 40px;
+  }
+
+  .client-control path{
+    fill: #c99065;
+  }
+
+  .control-prev{
+    left: 10px;
+  }
+
+  .control-next{
+    right: 10px;
+  }
+
+  /* CLIENT WRAPPER / FACE / QUOTE */
+
+  .client-info{
+    float: left;
+    margin-top: 45px;
+  }
+
+  .client-quote{
+    float: right;
+  }
+
+  .client-quote-mark{
+    top: 6px;
+    left: -9px;
+  }
+
+  .client-quote-msg{
+    line-height: 1.8;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .client-item{
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .client-item:after{
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* CLIENT LOGOS */
+
+  .client-logo-list{
+    display: block;
+    margin:0 auto;
+    max-width: 800px;  
+  }
+
+  .client-logo-item{
+    display: inline-block;
+    opacity: 0.5;
+    margin:20px;
+    padding-bottom: 20px;
+  }
+
+  .client-logo-item.active{
+    opacity: 1;
+    border-bottom: 4px solid #c99065;
+  }
+}
 
 
 
