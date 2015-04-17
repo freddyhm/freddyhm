@@ -856,8 +856,6 @@ header h1{
     width: 154px;
   }
 
-  
-
   /* NAME FIELD */
 
   label[for="name"]{
@@ -886,6 +884,37 @@ header h1{
 
 }
 
+/* -----------------------------------------------
+  :: FOOTER
+  --------------------------------------------- */
+
+.logo-footer{
+  float: left;
+}
+
+.footer-info{
+  float:right;
+}
+
+.footer-wrap{
+  width: 350px;
+}
+
+.site-footer{
+  width: 100%;
+  height: 140px;
+  background: url('../img/hero-bg.jpg') center center;
+  background-size: cover;
+}
+
+.site-footer-nav{
+  width: 100%;
+}
+
+.footer-nav-item{
+  display: inline-block;
+  margin: 8px;
+}
 
 
 
