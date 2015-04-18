@@ -10,12 +10,11 @@ $(function(){
     $('.work-list-wrap').addClass("hide");
     $('.work-desc-wrap').addClass("active");
     
-    // get project name and title from element 
-    var projName = $(this).attr("data-folder"), 
-        projTitle = $(this).text();
+    // get project name
+    var projName = $(this).attr("data-folder");
 
     // load our html and set project properties
-    loadWorkDetails(projName, projTitle);
+    loadWorkDetails(projName);
   });
 
   $('.desc-btn-back').click(function(event) {
@@ -46,9 +45,8 @@ $(function(){
     });
   }
 
-  function loadWorkDetails(projID, projTitle){
+  function loadWorkDetails(projID){
     var htmlURL = 'work/' + projID + '.html';
-    $('.work-desc-title').text(projTitle);
     $('.work-load').load(htmlURL);
   }
 
