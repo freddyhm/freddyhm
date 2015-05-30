@@ -7,8 +7,8 @@ $(function(){
   $('.work-item').click(function(event) {
 
     // hide our thumbs and show our work description
-    $('.work-list-wrap').addClass("hide");
-    $('.work-desc-wrap').addClass("active");
+    $('.work-list-wrap').addClass("work-list-wrap-hide");
+    $('.work-desc-wrap').addClass("work-desc-wrap-active");
     
     // get project name
     var projName = $(this).attr("data-folder");
@@ -20,9 +20,9 @@ $(function(){
   $('.desc-btn-back').click(function(event) {
 
     // hide work description and show thumbs
-    $('.work-list-wrap').removeClass("hide");
-    $('.work-desc-wrap').removeClass("active");
-    $('.work-desc-list').addClass("hide");
+    $('.work-list-wrap').removeClass("work-list-wrap-hide");
+    $('.work-desc-wrap').removeClass("work-desc-wrap-active");
+    $('.work-desc-list').addClass(".work-desc-list-hide");
   });
 
   for (var i = 0; i < workItems.length; i++) { 
@@ -31,15 +31,15 @@ $(function(){
     workItems[i].addEventListener('mouseover', function() {
       for (var i = 0; i < this.childNodes.length; i++) {
         if(this.childNodes[i].className === "work-overlay"){
-            this.childNodes[i].classList.toggle("over");
+            this.childNodes[i].classList.toggle("work-overlay-over");
         }
       }
     });
 
     workItems[i].addEventListener('mouseleave', function() {
       for (var i = 0; i < this.childNodes.length; i++) {
-        if(this.childNodes[i].classList.contains("over")){
-            this.childNodes[i].classList.remove("over");
+        if(this.childNodes[i].classList.contains("work-overlay-over")){
+            this.childNodes[i].classList.remove("work-overlay-over");
         }
       }
     });
@@ -47,7 +47,7 @@ $(function(){
 
   function loadWorkDetails(projID){
     var htmlURL = 'work/' + projID + '.html';
-    $('.work-load').load(htmlURL);
+    $('#js-work-load').load(htmlURL);
   }
 
   var clientItems =  $(".client-item").map(function(){ return $(this).data("client"); }).get(),  
@@ -56,37 +56,37 @@ $(function(){
   $('.client-nav-item').click(function(event) {
     
     // remove active nav item and current client  
-    $('.client-nav-item').removeClass('active');
-    $('.client-item').removeClass('active');
+    $('.client-nav-item').removeClass('client-nav-item-active');
+    $('.client-item').removeClass('client-item-active');
     
     // add new active nav and new client  
     var client = $(this).data("client");
-    $('.client-nav-item').filter("[data-client='" + client + "']").addClass('active');
-    $('.client-item').filter("[data-client='" + client + "']").addClass('active');
+    $('.client-nav-item').filter("[data-client='" + client + "']").addClass('client-nav-item-active');
+    $('.client-item').filter("[data-client='" + client + "']").addClass('client-item-active');
   });
 
   $('.control-prev').click(function(event) {
     
     // remove current client  
-    $('.client-logo-item').removeClass('active');
-    $('.client-item').removeClass('active');
+    $('.client-logo-item').removeClass('client-logo-item-active');
+    $('.client-item').removeClass('client-item-active');
     
     // get previous client and show
     var client = prevClient();
-    $('.client-logo-item').filter("[data-client='" + client + "']").addClass('active');
-    $('.client-item').filter("[data-client='" + client + "']").addClass('active');
+    $('.client-logo-item').filter("[data-client='" + client + "']").addClass('client-logo-item-active');
+    $('.client-item').filter("[data-client='" + client + "']").addClass('client-item-active');
   });
 
   $('.control-next').click(function(event) {
 
     // remove current client 
-    $('.client-logo-item').removeClass('active');
-    $('.client-item').removeClass('active');
+    $('.client-logo-item').removeClass('client-logo-item-active');
+    $('.client-item').removeClass('client-item-active');
     
     // get next client and show
     var client = nextClient();
-    $('.client-logo-item').filter("[data-client='" + client + "']").addClass('active');
-    $('.client-item').filter("[data-client='" + client + "']").addClass('active');
+    $('.client-logo-item').filter("[data-client='" + client + "']").addClass('client-logo-item-active');
+    $('.client-item').filter("[data-client='" + client + "']").addClass('client-item-active');
   });
 
   function prevClient(){
