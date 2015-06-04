@@ -46,7 +46,7 @@ $(function(){
   }
 
   function loadWorkDetails(projID){
-    var htmlURL = 'work/' + projID + '.html';
+    var htmlURL = projID + '.html';
     $('#js-work-load').load(htmlURL);
   }
 
