@@ -15,14 +15,15 @@ $(function(){
 
     // load our html and set project properties
     loadWorkDetails(projName);
+    event.preventDefault();
   });
 
   $('.desc-btn-back').click(function(event) {
-
     // hide work description and show thumbs
     $('.work-list-wrap').removeClass("work-list-wrap-hide");
     $('.work-desc-wrap').removeClass("work-desc-wrap-active");
     $('.work-desc-list').addClass(".work-desc-list-hide");
+    event.preventDefault();
   });
 
   for (var i = 0; i < workItems.length; i++) { 
@@ -46,7 +47,7 @@ $(function(){
   }
 
   function loadWorkDetails(projID){
-    var htmlURL = projID + '.html';
+    var htmlURL = projID + '.html #js-work-content';
     $('#js-work-load').load(htmlURL);
   }
 

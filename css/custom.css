@@ -44,6 +44,33 @@ address{
   font-style: normal;
 }
 
+/* skip links for accessibility */
+
+.link__skip-all a{
+  padding: 6px;
+  position: absolute;
+  top: -40px;
+  left: 0;
+  color: white;
+  font-weight: bold;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+  border-bottom-right-radius: 8px;
+  -webkit-transition: top 1s ease-out, background 1s linear;
+  -o-transition: top 1s ease-out, background 1s linear;
+  transition: top 1s ease-out, background 1s linear;
+}
+
+.link__skip-all a:focus{
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: darkred;
+  -webkit-transition: top .1s ease-in, background .5s linear;
+  -o-transition: top .1s ease-in, background .5s linear;
+  transition: top .1s ease-in, background .5s linear;
+}
+
 /* -----------------------------------------------
   :: HEADER
   --------------------------------------------- */
@@ -436,6 +463,12 @@ h1{
   display: block;
   clear: both;
 }
+
+/* WORK NO JS */
+.no-js .work-module{
+  background-color: #e5eaee;
+}
+  
   
 /* WORK THUMBS */
 
