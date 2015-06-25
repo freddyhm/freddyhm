@@ -255,17 +255,22 @@ h1{
 /* SPECIALTY ICONS */
 
 .specialty{
- /* display: -webkit-flex;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;  */
-  width: 320px;
   margin: 10px auto 0 auto;
 }
+
+/* FLEXBOX */
 
 .specialty-items-wrap{
   width: 160px;
   margin: 0 auto;
+}
+
+.flexbox .specialty-items-wrap{
+  width: 320px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap; 
 }
 
 .specialty-item{
@@ -355,6 +360,8 @@ h1{
 /* ---------------
   :: Small Mobile
   ----------------- */
+
+
 @media screen and (max-width: 319px){
 
   .specialty{
@@ -373,7 +380,7 @@ h1{
   :: Desktop
   ---------- */
 
-@media screen and (min-width: 640px){
+@media screen and (min-width: 750px){
 
   .about-pic{
     margin: 0 auto;
@@ -389,45 +396,46 @@ h1{
     margin-top: 60px;
     width: 100%;
     max-width: 780px;
-
-    /*
-    -webkit-justify-content: space-between;
-    justify-content: space-between;
-    -webkit-flex-wrap: nowrap;
-    flex-wrap: nowrap;*/
   }
 
   .specialty-item{
     margin: 47px 8px;
-
   }
 
-/*
-  .item-pencil{
+  /* FLEXBOX */
+
+  .flexbox .specialty-items-wrap{
+    width: 720px;
+     -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
+
+  .flexbox .item-pencil{
     order: 1;
     -webkit-order: 1; 
   }
 
-  .item-mouse{
+  .flexbox .item-mouse{
     order: 2;
     -webkit-order: 2;
   }
 
-  .about-pic{
+  .flexbox .about-pic{
     order: 3;
     -webkit-order: 3;
   }
 
-  .item-web{
+  .flexbox .item-web{
     order: 4;
     -webkit-order: 4;
   }
 
-  .item-video{
+  .flexbox .item-video{
     order: 5;
     -webkit-order: 5;
   }
-  */
 
   /* SKILLS */
 
@@ -464,7 +472,8 @@ h1{
   clear: both;
 }
 
-/* WORK NO JS */
+/* NO JS */
+
 .no-js .work-module{
   background-color: #e5eaee;
 }
@@ -667,6 +676,16 @@ h1{
   margin-right: 19px;
 }
 
+/* NO JS */
+
+.no-js .client-item{
+  display: block;
+}
+
+.no-js .client-nav-control{
+  display: none;
+}
+
 /* CLIENT WRAPPER*/
 
 .client-item{
@@ -851,17 +870,14 @@ h1{
   --------------------------------------------- */
 
 .social-list{
-
-  /*
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-justify-content: space-around;
-  justify-content: space-around; */
   height: 183px;
-  max-width: 700px;
-  margin: 22px auto;
+  max-width: 500px;
+  margin: 0 auto;
+  display: inline;
+}
+
+.social-item{
+  display: inline;
 }
 
 .social-item a{
@@ -888,6 +904,23 @@ h1{
 .contact-email a{
   font-size: 1.3em;
   font-weight: 300;
+}
+
+/* FLEXBOX */
+
+.flexbox .social-list{
+  max-width: 700px;
+  margin: 22px auto;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: space-around;
+  justify-content: space-around; 
+}
+
+.flexbox .social-item{
+  display: static;
 }
 
 /* ---------------
