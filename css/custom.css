@@ -10,7 +10,9 @@ body {
 
 a{
   text-decoration: none;
-  color: #c99065;
+  color: #738685;
+
+  /* #9CB7BE #5196B4; */
 }
 
 ul{
@@ -36,7 +38,7 @@ input:focus{
 }
 
 .hero-img{
-  background: url('../img/hero-bg.jpg') center center;
+  background: url('../img/sunny-beach.jpg') center center;
   background-size: cover;
 }
 
@@ -218,14 +220,14 @@ h1{
 }
 
 .module:nth-of-type(2n){
-  background-color: #e5eaee;
+  background-color: #B8D5DB;
 }
 
 .module-title{
   text-align: center;
   text-transform: uppercase;
   font-size: 14px;
-  color: #e1c285;
+  color: #738685;
   padding: 50px 0;
 }
 
@@ -316,43 +318,43 @@ h1{
 }
 
 .skill-level-1 .skill-unit:nth-of-type(-n+1){
-  border: 2px solid #c99065;
+  border: 2px solid #3779A0;
 }
 
 .skill-level-2 .skill-unit:nth-of-type(-n+2){
-  border: 2px solid #c99065;
+  border: 2px solid #3779A0;
 }
 
 .skill-level-3 .skill-unit:nth-of-type(-n+3){
-  border: 2px solid #c99065;
+  border: 2px solid #3779A0;
 }
 
 .skill-level-4 .skill-unit:nth-of-type(-n+4){
-  border: 2px solid #c99065;
+  border: 2px solid #3779A0;
 }
 
 .skill-level-5 .skill-unit:nth-of-type(-n+5){
-  border: 2px solid #c99065;
+  border: 2px solid #3779A0;
 }
 
 .skill-level-6 .skill-unit:nth-of-type(-n+6){
-  border: 2px solid #c99065;
+  border: 2px solid #3779A0;
 }
 
 .skill-level-7 .skill-unit:nth-of-type(-n+7){
-  border: 2px solid #c99065;
+  border: 2px solid #3779A0;
 }
 
 .skill-level-8 .skill-unit:nth-of-type(-n+8){
-  border: 2px solid #c99065;
+  border: 2px solid #3779A0;
 }
 
 .skill-level-9 .skill-unit:nth-of-type(-n+9){
-  border: 2px solid #c99065;
+  border: 2px solid #3779A0;
 }
 
 .skill-level-10 .skill-unit:nth-of-type(n){
-  border: 2px solid #c99065;
+  border: 2px solid #3779A0;
 }
 
 
