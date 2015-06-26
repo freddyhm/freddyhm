@@ -80,7 +80,7 @@ address{
   ---------- */
 
 .header{  
-  height: 335px; 
+  height: 310px; 
 }
 
 .logo-container{
@@ -98,7 +98,7 @@ address{
 
 .header-nav-list{
   text-align: center;
-  margin-top: 42px;
+  padding-top: 42px;
   margin-bottom: 40px;
 }
 
@@ -126,14 +126,12 @@ h1{
   letter-spacing: 0.05em;
   text-transform: uppercase;
   font-size: 1.5em;
-  margin-bottom: 49px;
+  margin-bottom: 25px;
   font-weight: 700;
 }
 
 .header-title{
-  border: 10px solid white;
   color: #fff;
-  padding: 0.2em 0.5em;
 }
 
 .tagline{
@@ -180,7 +178,6 @@ h1{
 
   .header-nav-list{
     float: right;
-    margin-top: 19px;
     margin-bottom: 0;
     margin-right: 30px;
   }
@@ -189,7 +186,11 @@ h1{
     text-transform: uppercase;
     color: #fff;
     display: inline-block;
-    padding: 0.05em 0.5em;
+    
+  }
+
+  .first-name{
+
   }
 
 }
@@ -274,8 +275,6 @@ h1{
 }
 
 .specialty-item{
-  background-color: #e5eaee;
-  border-radius: 50%;
   width: 100px;
   height: 100px;
   display: inline-block;
@@ -870,14 +869,14 @@ h1{
   --------------------------------------------- */
 
 .social-list{
-  height: 183px;
+  height: 180px;
   max-width: 500px;
   margin: 0 auto;
-  display: inline;
 }
 
 .social-item{
-  display: inline;
+  display: inline-block;
+  margin-top: 40px;
 }
 
 .social-item a{
@@ -909,6 +908,7 @@ h1{
 /* FLEXBOX */
 
 .flexbox .social-list{
+  height: 150px;
   max-width: 700px;
   margin: 22px auto;
   display: -webkit-flex;
@@ -920,7 +920,7 @@ h1{
 }
 
 .flexbox .social-item{
-  display: static;
+  margin: 0;
 }
 
 /* ---------------
@@ -942,10 +942,6 @@ h1{
   
   .contact-title{
     padding-top: 104px;
-  }
-
-  .social-list{
-    height: 113px;
   }
 
   .contact-email{
