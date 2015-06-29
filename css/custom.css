@@ -608,7 +608,11 @@ h1{
   margin: 0 0 9px 25px;
 }
 
-/* WORK SUMMARY */
+/* WORK SUMMARY - PROJECT INFO */
+
+.summary-role-list{
+  list-style-type: disc;
+}
 
 .summary-subsection{
   margin: 30px 10px;
@@ -654,8 +658,16 @@ h1{
 }
 
 .icon-apple2{
+  position: relative;
+  bottom: 4px;
   font-size: 60px;
   text-align: center;
+}
+
+@media screen and (min-width: 380px){
+  .summary-list-item{
+    width: 32%;
+  }
 }
 
 
