@@ -610,13 +610,16 @@ h1{
 
 /* WORK SUMMARY */
 
+.summary-subsection{
+  margin: 30px 10px;
+}
+
 .work-desc-about{
   clear:left;
 }
 
 .summary-tools{
   clear: left;
-  margin: 10px;
 }
 
 .summary-title{
@@ -634,6 +637,25 @@ h1{
 
 .summary-list-item{
   display: inline-block;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.summary-item-img{;
+  display: block;
+  height: 80px;
+  width: 150px;
+  margin: 0 auto;
+}
+
+.item-tool-img{
+  width: 60px;
+  height: 60px;
+}
+
+.icon-apple2{
+  font-size: 60px;
+  text-align: center;
 }
 
 
