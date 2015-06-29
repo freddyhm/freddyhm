@@ -464,10 +464,10 @@ h1{
 
 .work-container{
   width: 200%;
-  height: 452px;
+  height: 1852px;
 }
 
-.work-container:after{
+.work-container:after, .work-subsection:after{
   content: "";
   display: block;
   clear: both;
@@ -502,6 +502,7 @@ h1{
 
 .work-item{
   width: 50%;
+  margin: 40px;
   float: left;
   cursor: pointer;
   position: relative;
@@ -510,6 +511,7 @@ h1{
 .work-item img{
   width: 100%;
   max-width: 600px;
+  height: 180px;
 }
 
 .work-overlay{
@@ -603,8 +605,37 @@ h1{
   color: #c99065;
   width: 80%;
   float: left;
-  margin: 0 0 40px 60px;
+  margin: 0 0 9px 25px;
 }
+
+/* WORK SUMMARY */
+
+.work-desc-about{
+  clear:left;
+}
+
+.summary-tools{
+  clear: left;
+  margin: 10px;
+}
+
+.summary-title{
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.summary-content{
+  margin: 10px;
+}
+
+.role-list{
+  list-style-type: disc;
+}
+
+.summary-list-item{
+  display: inline-block;
+}
+
 
 /* -----------
   :: Desktop
