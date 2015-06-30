@@ -39,6 +39,8 @@ $(function(){
 
     workItems[i].addEventListener('mouseleave', function() {
       for (var i = 0; i < this.childNodes.length; i++) {
+
+        console.log(this.childNodes[0]);
         if(this.childNodes[i].classList.contains("work-overlay-over")){
             this.childNodes[i].classList.remove("work-overlay-over");
         }

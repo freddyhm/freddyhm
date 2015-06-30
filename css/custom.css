@@ -226,9 +226,18 @@ h1{
 .module-title{
   text-align: center;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 1.4em;
   color: #738685;
   padding: 50px 0;
+}
+
+.sub-title{
+  padding: 10px;
+  font-size: 1em;
+}
+
+.work-project-title{
+  font-size: 1.3em;
 }
 
 /* -----------------------------------------------
@@ -473,6 +482,16 @@ h1{
   clear: both;
 }
 
+.work-subsection{
+  margin-top: 25px;
+}
+
+.subsection-first{
+  margin-top: 0;
+}
+
+
+
 /* NO JS */
 
 .no-js .work-module{
@@ -484,7 +503,6 @@ h1{
 
 .work-list-wrap{
   width: 50%;
-  height: inherit;
   float:left;
   transition: transform 1s ease;
   -webkit-transition: -webkit-transform 1s ease;
@@ -501,16 +519,13 @@ h1{
 }
 
 .work-item{
-  width: 50%;
-  margin: 40px;
-  float: left;
-  cursor: pointer;
+  margin: 10px;
   position: relative;
 }
 
 .work-item img{
   width: 100%;
-  max-width: 600px;
+  max-width: 300px;
   height: 180px;
 }
 
@@ -546,6 +561,14 @@ h1{
   top: 30%;
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
+}
+
+.work-project-title{
+  margin: 17px 0px;
+  font-size: 1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: white;
 }
 
 /* WORK DESCRIPTION */ 
@@ -664,6 +687,14 @@ h1{
   text-align: center;
 }
 
+@media screen and (min-width: 340px){
+
+  .work-item{
+    width: 300px;
+    margin: 0 auto;
+  }
+}
+
 @media screen and (min-width: 380px){
   .summary-list-item{
     width: 32%;
@@ -683,10 +714,6 @@ h1{
     margin-right: auto;
     margin-left: auto;
   }
-  
-  .work-item{
-    width: 25%;
-  }
 
   .desc-btn-back{
     left: -60px;
@@ -697,12 +724,29 @@ h1{
   } 
 }
 
+@media screen and (min-width: 940px){
+
+  .work-container{
+    height: 1000px;
+  }
+    
+  .work-item{
+    float: left;
+    margin: 1%;
+    width: 31%;
+  }
+}
+
 @media screen and (min-width: 1024px){
 
   /* SHOW OVERLAY FOR DESKTOP */
   .work-overlay-over{
     transform: scale(1, 1);
     -webkit-transform: scale(1, 1);
+  }
+
+  .work-project-title{
+    display: none;
   }
 
 }
