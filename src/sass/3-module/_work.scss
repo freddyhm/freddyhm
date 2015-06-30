@@ -1,0 +1,287 @@
+/* -----------------------------------------------
+  :: WORK MODULE
+  --------------------------------------------- */
+
+.work-module{
+  overflow-x: hidden;
+}
+
+.work-container{
+  width: 200%;
+  height: 1852px;
+}
+
+.work-container:after, .work-subsection:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.work-subsection{
+  margin-top: 25px;
+}
+
+.subsection-first{
+  margin-top: 0;
+}
+
+
+
+/* NO JS */
+
+.no-js .work-module{
+  background-color: #e5eaee;
+}
+  
+  
+/* WORK THUMBS */
+
+.work-list-wrap{
+  width: 50%;
+  float:left;
+  transition: transform 1s ease;
+  -webkit-transition: -webkit-transform 1s ease;
+  overflow-y: auto;
+}
+
+.work-list-wrap-hide{
+  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+}
+
+.work-list{
+  max-width: 960px;
+}
+
+.work-item{
+  margin: 10px;
+  position: relative;
+}
+
+.work-item img{
+  width: 100%;
+  max-width: 300px;
+  height: 180px;
+}
+
+.work-overlay{
+  width: 100%;
+  height: 100%;
+  background-color: gray;
+  background-color: rgba(201, 144, 101, 0.9);
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-align: center;
+  z-index: 10;
+  transition: transform 0.2s ease;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transform: scale(0, 0);
+  -webkit-transform: scale(0, 0);
+}
+
+.work-overlay-over{
+  transform: scale(0, 0);
+  -webkit-transform: scale(0, 0);
+}
+
+.work-overlay-title{
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  color: #fff;
+  line-height: 1.2;
+  font-weight: 300;
+  top: 30%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+
+.work-project-title{
+  margin: 17px 0px;
+  font-size: 1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: white;
+}
+
+/* WORK DESCRIPTION */ 
+
+.work-desc-wrap{
+  width: 50%;
+  float:right;
+  position: relative;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: transform 1s ease, opacity 2s ease, max-height 1s linear;
+  -webkit-transition: -webkit-transform 1s ease, opacity 2s ease, max-height 1s linear;
+}
+
+.work-desc-wrap-active{
+  opacity: 1;
+  max-height: 1000em;
+  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+}
+
+.work-desc{
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 15px;
+  position: relative;
+}
+
+.desc-btn-back{
+  display: inline-block;
+  float: left;
+  position: absolute;
+  left: 4px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.desc-btn-back:hover{
+  opacity: 1;
+}
+
+.desc-btn-back svg{
+  width: 48px;
+  height: 48px;
+  margin-left: -4px;
+}
+
+.desc-btn-back path{
+  fill: rgba(0, 0, 0, 0.4);
+}
+
+.work-desc-title{
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 28px; 
+  color: #c99065;
+  width: 80%;
+  float: left;
+  margin: 0 0 9px 25px;
+}
+
+/* WORK SUMMARY - PROJECT INFO */
+
+.summary-role-list{
+  list-style-type: disc;
+}
+
+.summary-subsection{
+  margin: 100px 10px;
+}
+
+.work-desc-about{
+  clear:left;
+}
+
+.summary-tools{
+  clear: left;
+}
+
+.summary-title{
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.summary-content{
+  margin: 10px;
+}
+
+.role-list{
+  list-style-type: disc;
+}
+
+.summary-list-item{
+  display: inline-block;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.summary-item-img{;
+  display: block;
+  height: 80px;
+  width: 150px;
+  margin: 0 auto;
+}
+
+.item-tool-img{
+  width: 60px;
+  height: 60px;
+}
+
+.icon-apple2{
+  position: relative;
+  bottom: 4px;
+  font-size: 60px;
+  text-align: center;
+}
+
+@media screen and (min-width: 340px){
+
+  .work-item{
+    width: 300px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 380px){
+  .summary-list-item{
+    width: 32%;
+  }
+}
+
+
+/* -----------
+  :: Desktop
+  ---------- */
+
+@media screen and (min-width: 760px){
+  
+  /* WORK THUMBS */
+
+  .work-list{
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .desc-btn-back{
+    left: -60px;
+  }
+  
+  .work-desc-title{
+    margin-left: 0;
+  } 
+}
+
+@media screen and (min-width: 940px){
+
+  .work-container{
+    height: 1000px;
+  }
+    
+  .work-item{
+    float: left;
+    margin: 1%;
+    width: 31%;
+  }
+}
+
+@media screen and (min-width: 1024px){
+
+  /* SHOW OVERLAY FOR DESKTOP */
+  .work-overlay-over{
+    transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+  }
+
+  .work-project-title{
+    display: none;
+  }
+
+}

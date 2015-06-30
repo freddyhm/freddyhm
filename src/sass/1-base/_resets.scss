@@ -1,0 +1,38 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #666;
+  -webkit-font-smoothing: antialiased;
+}
+
+a{
+  text-decoration: none;
+  color: #738685;
+
+  /* #9CB7BE #5196B4; */
+}
+
+ul{
+  margin:0; 
+  padding:0;
+  list-style-type: none;
+}
+
+img{
+  max-width: 100%;
+}
+
+textarea{
+  resize: none;
+}
+
+textarea:focus{
+  outline: none;
+}
+
+input:focus{
+  outline: none;
+}
+
+address{
+  font-style: normal;
+}

@@ -1,0 +1,128 @@
+/* -----------------------------------------------
+  :: HEADER
+  --------------------------------------------- */
+
+/* ------------
+  :: Mobile
+  ---------- */
+
+.hero-img{
+  background: url('../img/sunny-beach.jpg') center center;
+  background-size: cover;
+}
+
+.header{  
+  height: 310px; 
+}
+
+.logo-container{
+  width: 50px;
+  margin: 0 auto;
+  opacity: 0.5;
+  position: relative;
+  top: 22px;
+}
+
+.logo{
+  width: 50px;
+  height: 50px;
+}
+
+.header-nav-list{
+  text-align: center;
+  padding-top: 42px;
+  margin-bottom: 40px;
+}
+
+.header-nav-item{ 
+  display: inline-block;
+  text-transform: uppercase;
+  padding-right: 10px;
+}
+
+.header-nav-link{
+  color: gray;
+  color: rgba(0,0,0,0.7);
+  font-weight: 600;
+  font-size: 0.9em;
+}
+
+.header-nav-link:hover{
+  color: black;
+  color: rgba(0,0,0,1);
+}
+
+h1{
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.header-title{
+  color: #fff;
+}
+
+.tagline{
+  font-size: 0.9em;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  line-height: 1;
+}
+
+/* ----------------
+  :: LARGER MOBILE
+  ----------------- */
+
+@media screen and (min-width: 400px){
+  
+  h1{ font-size: 1.8em; }
+}
+
+/* -----------
+  :: Desktop
+  ---------- */
+
+@media screen and (min-width: 640px){
+
+  header{ height: 375px; }
+
+  h1{
+    clear: both;
+    font-size: 3.9em;
+    padding-top: 80px ;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+
+  .logo{
+    float: left;
+    margin-left: 15px;
+    top: 10px;
+  }
+
+  .header-nav-list{
+    float: right;
+    margin-bottom: 0;
+    margin-right: 30px;
+  }
+  
+  .header-title{
+    text-transform: uppercase;
+    color: #fff;
+    display: inline-block;
+    
+  }
+
+  .first-name{
+
+  }
+
+}
