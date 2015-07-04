@@ -1,0 +1,15 @@
+/**
+* @name         Social List    
+* @requires     layout.scss
+*/
+
+.social__list{
+	text-align: center;
+	@media screen and (min-width:$break-med){
+		@include container(75%);
+	}
+}
+
+.social__item{
+	@include span(4); 
+}

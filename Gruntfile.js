@@ -9,19 +9,19 @@ module.exports = function(grunt) {
 			livereload: {
 				options: {
 					livereload: true,
-					spawn: false	
+					spawn: false
 				},
 				files: ['dist/css/*.css', 'dist/index.html']
 			},
 			html: {
-		    	files: ['src/includes/*.html'],
+		    	files: ['src/includes/*.html', 'index.html'],
 		    	tasks: ['includereplace']
 			}
 		},
 		sass: {
 			options: {
-				sourceMap: true,
-				outputStyle: 'compressed'
+				//sourceMap: true,
+			//	outputStyle: 'compressed'
 			},
 			dist: {
 				files: {
@@ -58,5 +58,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-concat');
 
 	grunt.registerTask('setup', ['sass', 'copy', 'concat', 'includereplace']);
+	
 	grunt.registerTask('default', ['watch']);
 };

@@ -1,0 +1,33 @@
+/**
+* @name         Container slider
+* @requires     _layout.scss
+*/
+
+.page-slider{
+ 	overflow-x: hidden;
+}
+
+.page-slider__content{
+	width: 200%;
+  	height: 1852px;
+  	@extend %clearfix;
+}
+
+.page-slider__first{
+	width: 50%;
+	float: left;
+	transition: transform 1s ease;
+	-webkit-transition: -webkit-transform 1s ease;
+	overflow-y: auto;
+}
+
+.page-slider__second{
+	width: 50%;
+	float: right;
+	position: relative;
+	max-height: 0;
+	overflow: hidden;
+	opacity: 0;
+	transition: transform 1s ease, opacity 2s ease, max-height 1s linear;
+	-webkit-transition: -webkit-transform 1s ease, opacity 2s ease, max-height 1s linear;
+}

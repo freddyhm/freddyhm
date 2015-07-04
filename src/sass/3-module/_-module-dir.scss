@@ -1,7 +1,16 @@
-@import 'module';
-@import 'about';
-@import 'client';
-@import 'contact';
+// @name 	module directory
+// @desc 	imports modules
+// @note 	modules are reusable objects that are 
+//			often made up of custom styled blocks
+
+@import 'header';
+@import 'footer';
+@import 'nav';
+@import 'gallery';
 @import 'form';
-@import 'work';
+@import 'address';
+@import 'skill-list';
+@import 'social-list';
+@import 'specialty';
+@import 'page-slider'
 

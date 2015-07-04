@@ -1,7 +1,10 @@
-@import 'normalize';
+// @name 	base directory
+// @desc 	imports core styles 
+
+@import 'reset';
 @import 'vars';
-@import 'resets';
 @import 'fonts';
-@import 'skip-links';
 @import 'typography';
+@import 'layout';
+@import 'skip-links';
 

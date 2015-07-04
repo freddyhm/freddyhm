@@ -1,0 +1,10 @@
+/**
+* @name         Gallery    
+* @requires     _layout.scss
+*/
+
+@media screen and (min-width:$break-med){
+	.work-item{
+		@include span(4);
+	}
+}

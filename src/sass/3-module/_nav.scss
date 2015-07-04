@@ -1,0 +1,25 @@
+/**
+* @name         Navigation    
+* @requires     _layout.scss
+*/
+
+.nav{
+	@extend %clearfix;
+	text-align: center;
+}
+
+.nav__item{
+	text-transform: uppercase;
+}
+
+.nav__link{
+  color: gray;
+  color: rgba(0,0,0,0.7);
+  font-weight: 600;
+  font-size: 0.9em;
+}
+
+.nav__link:hover{
+  color: black;
+  color: rgba(0,0,0,1);
+}

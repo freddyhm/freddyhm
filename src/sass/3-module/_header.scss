@@ -1,0 +1,53 @@
+/**
+* @name         Header
+* @requires     _layout.scss
+*/
+
+.header{
+  padding-top: 2.5em;
+  padding-bottom: 6.2em;
+}
+
+.header__title,
+.header__subtitle{
+  color: $white;
+}
+
+.hero{
+  background: url('../img/sunny-beach.jpg') center center;
+  background-size: cover;
+}
+
+/* :: HEADER TITLES ------------ */
+
+.header__title{
+  margin-top: 1.5em;
+  font-weight: 700;
+  @media screen and (min-width:$break-med){
+  }
+}
+
+.header__subtitle{
+  font-weight: 500;
+}
+
+/* :: HEADER NAV ------------ */
+
+.header__nav{ 
+  @include container($medium-layout);
+  @media screen and (min-width:$break-med){
+    @include container($wide-layout);
+  }
+}
+
+.header__nav__list{
+  text-align: center;
+  @media screen and (min-width:$break-med){
+    @include span(6 last);
+  }
+}
+
+.header__nav__item{ 
+  @include span(3);
+}
+

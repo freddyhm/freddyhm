@@ -1,0 +1,37 @@
+/**
+* @name         Skill List    
+* @requires     _layout.scss
+*/
+
+.skill__item{
+	display: inline;
+	text-align: left;
+}
+
+.skill__unit{
+  display: inline-block;
+  padding: 5px;
+  background-color: white;
+  border-radius: 50%;
+  border: 2px solid #e5eaee;
+  margin-right: 5px;
+}
+
+.skill__level--1 .skill__unit:nth-of-type(-n+1),
+.skill__level--2 .skill__unit:nth-of-type(-n+2),
+.skill__level--3 .skill__unit:nth-of-type(-n+3),
+.skill__level--4 .skill__unit:nth-of-type(-n+4),
+.skill__level--5 .skill__unit:nth-of-type(-n+5),
+.skill__level--6 .skill__unit:nth-of-type(-n+6),
+.skill__level--7 .skill__unit:nth-of-type(-n+7),
+.skill__level--8 .skill__unit:nth-of-type(-n+8),
+.skill__level--9 .skill__unit:nth-of-type(-n+9),
+.skill__level--10 .skill__unit:nth-of-type(n){
+  border: 2px solid #3779A0;
+}
+
+@media screen and (min-width:$break-med){
+	.skill__item{
+		@include span(6);
+	}
+}

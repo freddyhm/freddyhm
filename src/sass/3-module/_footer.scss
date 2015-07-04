@@ -1,0 +1,32 @@
+/**
+* @name         Footer    
+* @requires     _layout.scss
+*/
+
+/* :: FOOTER NAV ------------ */
+
+.footer__nav{
+  @include container($wide-layout);
+}
+
+.footer__nav__list{
+  @include span(7);
+  @media screen and (min-width:$break-med){
+    @include container(20em);
+    @include span(12);
+  }
+}
+
+.footer__nav__item{
+  @include span(6);
+  @media screen and (min-width:$break-med){
+    @include span(3);
+  }
+}
+
+/* :: FOOTER COPYRIGHT ------------ */
+
+.footer__copyright{
+  @include span(12);
+  clear: both;
+}

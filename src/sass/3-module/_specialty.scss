@@ -1,0 +1,21 @@
+/**
+* @name         Specialty    
+* @requires     _layout.scss, _vars.scss
+*/
+
+.face{
+	margin-bottom: 1em;
+}
+
+.specialty{
+	@extend %clearfix;
+}
+
+.specialty__item{
+	@include span(6); 
+	margin-bottom: 1em;
+	text-align: center;
+	@media screen and (min-width:$break-med){
+		@include span(3);
+	}
+}

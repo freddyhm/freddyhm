@@ -1,2 +1,8 @@
-@import 'footer';
-@import 'header';
+// @name 	block directory
+// @desc 	imports core blocks
+// @note    blocks are basic elements used to build modules
+			
+@import 'link';
+@import 'bar';
+@import 'list';
+@import 'media';
