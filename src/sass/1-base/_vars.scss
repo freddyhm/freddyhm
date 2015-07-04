@@ -1,27 +1,39 @@
 // @name 	Variables
 
-// Cool
-$aqua:  #7FDBFF;
-$blue:  #0074D9;
-$navy:  #001F3F;
-$teal:  #39CCCC;
-$green: #2ECC40;
-$olive: #3D9970;
-$lime:  #01FF70;
+// :: COLORS ------------ //
 
-
-// Warm
-$yellow:  #FFDC00;
-$orange:  #FF851B;
-$red:     #FF4136;
-$fuchsia: #F012BE;
-$purple:  #B10DC9;
-$maroon:  #85144B;
-
-
-// Gray Scale
+// Colors - Source: http://chir.ag/projects/name-that-color/
+$sirocco: #738685;
+$oslo-gray: #829392;
 $white:  #fff;
-$silver: #ddd;
 $gray:   #aaa;
 $black:  #111;
-$gallery: #eee;
+
+// Sections
+$body-bg-color: $white;
+$body-font-color: $oslo-gray;
+$font-default-color: $black;
+$title-color: $sirocco;
+
+
+// :: TYPOGRAPHY ------------ //
+
+// Font sizes
+$gigantic-font: 6.875em;
+$huge-font: 4.250em;
+$xx-lrg-font: 2.625em; 
+$x-lrg-font: 1.8em;
+$lrg-font: 1.365em;
+$med-font:  1em;
+$sm-font: 0.938em;
+
+// Line height
+$tall-line-height: 1.38;
+$normal-line-height:  1.2;
+$short-line-height: 1.14;
+$lil-line-height: 1.09;
+$tiny-line-height: 1.05;
+
+// Letter spacing
+$narrow-letter-spacing: -0.1252em;
+$skinny-letter-spacing: -0.063em;

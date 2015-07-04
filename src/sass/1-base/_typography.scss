@@ -11,47 +11,46 @@
 .bigger, 
 .big,
 {
-  color: $black;
+  color: $font-default-color;
   font-weight: bold;
 }
 
 .gigantic{
-  font-size: 6.875em;
-  line-height: 1.09;
-  letter-spacing: -0.125em;
+  font-size: $gigantic-font;
+  line-height: $lil-line-height;
+  letter-spacing: $narrow-letter-spacing;
 }
 
 .huge{
-  font-size: 4.250em;
-  line-height: 1.05;
-  letter-spacing: -0.063em;
+  font-size: $huge-font;
+  line-height: $tiny-line-height;
+  letter-spacing: $skinny-letter-spacing;
 
 }
 
 .large{
-  font-size: 2.625em;
-  line-height: 1.14;
+  font-size: $lrg-font;
+  line-height: $short-line-height;
 }
 
 .bigger{
-  font-size: 1.8em;
-  line-height: 1.38;
-
+  font-size: $x-lrg-font;
+  line-height: $tall-line-height;
 }
 
 .big{
-  font-size: 1.365em;
-  line-height: 1.38;
+  font-size: $lrg-font;
+  line-height: $tall-line-height;
 }
 
 .medium{
-  font-size: 15px;
-  line-height: 1.20;
+  font-size: $med-font;
+  line-height: $normal-line-height;
 }
 
 .small{
-  font-size: 0.938em;
-  line-height: 1.2;
+  font-size: $sm-font;
+  line-height: $normal-line-height;
 }
 
 
@@ -60,9 +59,9 @@
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 100%;
-  color: #666;
+  color: $body-font-color;
   -webkit-font-smoothing: antialiased;
-  background-color: $gallery;
+  background-color: $body-bg-color;
 }
 
 .title, 
@@ -70,9 +69,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-}
-
-.subtitle{
+  color: $title-color;
 }
 
 .description{
