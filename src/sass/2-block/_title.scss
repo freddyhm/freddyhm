@@ -1,0 +1,17 @@
+/**
+* @name 	Title
+*/
+
+.title, 
+.subtitle{
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: $normal-letter-spacing;
+  color: $title-color;
+}
+
+/* :: CUSTOM ------------ */
+
+.section__title{
+	padding: 3.125em 0;
+}

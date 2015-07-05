@@ -13,6 +13,13 @@
   color: $white;
 }
 
+.header__wrapper{
+  @include container($main-layout);
+  @media screen and (min-width:$break-med){
+    @include container($full-layout);
+  }
+}
+
 .hero{
   background: url('../img/sunny-beach.jpg') center center;
   background-size: cover;
@@ -34,20 +41,17 @@
 /* :: HEADER NAV ------------ */
 
 .header__nav{ 
-  @include container($medium-layout);
-  @media screen and (min-width:$break-med){
-    @include container($wide-layout);
-  }
+  
 }
 
 .header__nav__list{
-  text-align: center;
+  text-align: left;
   @media screen and (min-width:$break-med){
-    @include span(6 last);
+    float: right;
   }
 }
 
 .header__nav__item{ 
-  @include span(3);
+  padding-right: 0.95em;
 }
 

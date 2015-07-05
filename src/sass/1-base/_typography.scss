@@ -11,7 +11,6 @@
 .bigger, 
 .big,
 {
-  color: $font-default-color;
   font-weight: bold;
 }
 
@@ -29,27 +28,27 @@
 }
 
 .large{
-  font-size: $lrg-font;
+  font-size: $large-font;
   line-height: $short-line-height;
 }
 
 .bigger{
-  font-size: $x-lrg-font;
+  font-size: $bigger-font;
   line-height: $tall-line-height;
 }
 
 .big{
-  font-size: $lrg-font;
+  font-size: $big-font;
   line-height: $tall-line-height;
 }
 
 .medium{
-  font-size: $med-font;
+  font-size: $medium-font;
   line-height: $normal-line-height;
 }
 
 .small{
-  font-size: $sm-font;
+  font-size: $small-font;
   line-height: $normal-line-height;
 }
 
@@ -59,19 +58,13 @@
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 100%;
-  color: $body-font-color;
+  color: $font-default-color;
   -webkit-font-smoothing: antialiased;
   background-color: $body-bg-color;
 }
 
-.title, 
-.subtitle{
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: $title-color;
-}
-
 .description{
+  @include container($desc-layout-width);
   text-align: center;
+  font-weight: $light;
 }

@@ -3,10 +3,7 @@
 */
 
 .bar{
-	border-width: 2px;
-	border-style: solid;
-}
-
-.bar--dark{
-	border-color: red;
+	width: 15.625em;
+	margin: 2.8125em auto;
+	border: 2px solid $bar-color;
 }

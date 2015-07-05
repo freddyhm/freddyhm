@@ -3,6 +3,12 @@
 * @requires     _layout.scss
 */
 
+.skill__list{
+  @media screen and (min-width:$break-med){
+    @include container($skill-layout-width);
+  }
+}
+
 .skill__item{
 	display: inline;
 	text-align: left;
@@ -15,6 +21,12 @@
   border-radius: 50%;
   border: 2px solid #e5eaee;
   margin-right: 5px;
+}
+
+.skill__title{
+  text-align: left;
+  text-transform: none;
+  font-weight: $light;
 }
 
 .skill__level--1 .skill__unit:nth-of-type(-n+1),

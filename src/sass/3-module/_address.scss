@@ -4,4 +4,13 @@
 
 .address{
 	text-align: center;
+	font-size: $big-font;
+  	font-weight: $light;
+  	font-style: normal;
+
+	@media screen and (min-width:$break-sm){
+		font-size: $biggest-font;		
+	}
 }
+
+  

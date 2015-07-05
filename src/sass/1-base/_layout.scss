@@ -16,18 +16,6 @@ $susy: (
 @include layout(12);
 @include border-box-sizing;
 
-// :: LAYOUT VARIABLES ------------  
-
-// Layout width
-$main-layout: 80%;
-$medium-layout: 85%;
-$wide-layout: 90%;
-
-// Media queries 
-$break-sm: 400px;
-$break-med: 640px;
-$break-lrg: 960px;
-
 /* :: FIXES ------------ */
 
 // Clear fix
@@ -43,8 +31,9 @@ $break-lrg: 960px;
 
 .section{
 	@extend %clearfix;
+	@include container($main-layout);
 }
 
-.main{
-	@include container($main-layout);
+.section__wrapper{
+	background-color: $section-bkg-color;
 }

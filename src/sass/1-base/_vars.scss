@@ -4,16 +4,33 @@
 
 // Colors - Source: http://chir.ag/projects/name-that-color/
 $sirocco: #738685;
-$oslo-gray: #829392;
+$dove-gray: #666666;
+$ziggurat: #B8D5DB;
 $white:  #fff;
 $gray:   #aaa;
 $black:  #111;
 
 // Sections
+$brand-color: $ziggurat;
 $body-bg-color: $white;
-$body-font-color: $oslo-gray;
-$font-default-color: $black;
+$font-default-color: $dove-gray;
 $title-color: $sirocco;
+
+// Links
+$link-color: $sirocco;
+
+// Titles
+$light-title-color: $white;
+
+// Sections
+$section-bkg-color: $brand-color;
+
+// Social list
+$social-list-color: $sirocco;
+
+// Bar
+$bar-color: $sirocco;
+
 
 
 // :: TYPOGRAPHY ------------ //
@@ -21,11 +38,12 @@ $title-color: $sirocco;
 // Font sizes
 $gigantic-font: 6.875em;
 $huge-font: 4.250em;
-$xx-lrg-font: 2.625em; 
-$x-lrg-font: 1.8em;
-$lrg-font: 1.365em;
-$med-font:  1em;
-$sm-font: 0.938em;
+$large-font: 2.625em; 
+$biggest-font: 2em;
+$bigger-font: 1.6em;
+$big-font: 1.4em;
+$medium-font: 1em;
+$small-font: 0.938em;
 
 // Line height
 $tall-line-height: 1.38;
@@ -35,5 +53,32 @@ $lil-line-height: 1.09;
 $tiny-line-height: 1.05;
 
 // Letter spacing
+$normal-letter-spacing: 0.05em;
 $narrow-letter-spacing: -0.1252em;
 $skinny-letter-spacing: -0.063em;
+
+// Font weights
+$lightest: 100;
+$lighter: 200;
+$light: 300;
+$regular: 400;
+$bold: 600;
+
+// :: LAYOUT ------------ //
+
+// General layout width
+$main-layout: 80%;
+$medium-layout: 85%;
+$wide-layout: 90%;
+$full-layout: 100%;
+
+// Media queries 
+$break-sm: 480px;
+$break-med: 640px;
+$break-lrg: 960px;
+
+// Description
+$desc-layout-width: 26em; 
+
+// Skill 
+$skill-layout-width: 38.43em;

@@ -3,8 +3,45 @@
 * @requires     _layout.scss
 */
 
+.gallery__title{
+	margin: 1.0625em 0;
+	text-align: left;
+	font-weight: $bold;
+	color: $light-title-color;
+}
+
+.gallery__overlay__title{
+	position: relative;
+	top: 30%;
+	color: $light-title-color;
+	font-weight: $light;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+}
+
+.gallery__overlay{
+  width: 100%;
+  height: 100%;
+  background-color: gray;
+  background-color: rgba(201, 144, 101, 0.9);
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-align: center;
+  z-index: 10;
+  transition: transform 0.2s ease;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transform: scale(0, 0);
+  -webkit-transform: scale(0, 0);
+}
+
+.gallery__overlay--over{
+  transform: scale(0, 0);
+  -webkit-transform: scale(0, 0);
+}
+
 @media screen and (min-width:$break-med){
-	.work-item{
+	.gallery__item{
 		@include span(4);
 	}
 }
