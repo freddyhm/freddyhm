@@ -14,12 +14,8 @@ module.exports = function(grunt) {
 				files: ['dist/css/*.css', 'dist/index.html', 'dist/projects/*.html']
 			},
 			html: {
-		    	files: ['src/includes/*.html', 'index.html'],
+		    	files: ['src/includes/**/*.html', 'index.html'],
 		    	tasks: ['includereplace']
-			},
-			project: {
-				files: ['src/includes/projects/*.html'],
-				tasks: ['copy:project']
 			}
 		},
 		sass: {
@@ -59,9 +55,9 @@ module.exports = function(grunt) {
 		    	dest: 'dist/'
 		  	},
 		  	projects: {
-		  		cwd: 'src/includes/',
+		  		cwd: 'src/includes/projects/',
 		  		expand: true,
-		    	src: ['projects/*.html'],
+		    	src: ['*.html'],
 		    	dest: 'dist/'
 		  	}
 		},
