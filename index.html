@@ -1,4 +1,4 @@
-@@include('src/includes/start.html')
+@@include('src/includes/start.html', {"csspath": "css/styles.css"})
     <div class="link__skip-all"><a href="#main">Skip to main content</a></div>
     @@include('src/includes/header.html')
     <main class="main">
@@ -8,4 +8,4 @@
       @@include('src/includes/form.html') 
     </main>
     @@include('src/includes/footer.html') 
-@@include('src/includes/end.html')
+@@include('src/includes/end.html', {"jspath": "js/main.js"})
