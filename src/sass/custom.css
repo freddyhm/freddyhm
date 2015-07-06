@@ -2,7 +2,7 @@
   :: GLOBAL
   --------------------------------------------- */
 
-body {
+body{
   font-family: 'Open Sans', sans-serif;
   color: #666;
   -webkit-font-smoothing: antialiased;
@@ -1248,7 +1248,3 @@ h1{
     height: 141px;
   }
 }
-
-
-
-

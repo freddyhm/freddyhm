@@ -5,5 +5,6 @@
 .media{
 	@include container;
 	display: block;
+	max-width: 100%;
 }
 

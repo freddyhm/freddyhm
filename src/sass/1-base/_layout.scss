@@ -29,6 +29,10 @@ $susy: (
 
 /* :: SECTIONS ------------ */
 
+.section, .section__wrapper{
+	padding: 3.125em 0;
+}
+
 .section{
 	@extend %clearfix;
 	@include container($main-layout);
@@ -36,4 +40,8 @@ $susy: (
 
 .section__wrapper{
 	background-color: $section-bkg-color;
+}
+
+.section--wrapped{
+	padding-bottom: 0;
 }

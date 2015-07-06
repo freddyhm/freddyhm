@@ -4,21 +4,50 @@
 */
 
 .form{
-  @media screen and (min-width:$break-med){
-    @include container(40em);
-  }
+	@media screen and (min-width:$break-med){
+		@include container(30em);
+	}
+}
+
+.form__submit, .form__field, .form__label{
+	@include span(12);
+}
+
+.form__field, .form__details, .form__submit{
+	border: 3px solid #c99065;
+  	padding: 10px;
+}
+
+.form__fields{
+	margin: 2em 0;
+	padding: 0;
+	border: none;
+}	
+
+.form__label{
+	font-size: $small-font;
+}
+
+.form__name{
+	margin-bottom: 1em;
 }
 
 .form__submit{
-  @media screen and (min-width:$break-med){
-    @include span(2 of last);
-  }
+	background-color: #c99065;
+	color: #fff;
+	padding: 10px;
+	font-size: 18px;
+	margin-top: 20px;
+
+	@media screen and (min-width:$break-med){
+  		@include span(4 of last);
+  	}
 }
 
 .form__details{
-  @include span(12);
+  	@include span(12);
+  	height: 10em;
+  	overflow: hidden;
+  	resize: none;
 }
 
-.form__submit, .form__email, .form__text, .label{
-  @include span(12);
-}

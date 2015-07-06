@@ -3,6 +3,22 @@
 * @requires     _layout.scss
 */
 
+.gallery__section{
+  @include container($wide-layout);
+}
+
+.gallery__subsection{
+  @media screen and (min-width: $break-med){
+      @include container($full-layout); 
+  }
+}
+
+.gallery__image{
+  max-width: 300px;
+  height: 180px;
+  width: 100%;
+}
+
 .gallery__title{
 	margin: 1.0625em 0;
 	text-align: left;

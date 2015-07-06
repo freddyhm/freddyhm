@@ -11,11 +11,15 @@ module.exports = function(grunt) {
 					livereload: true,
 					spawn: false
 				},
-				files: ['dist/css/*.css', 'dist/index.html']
+				files: ['dist/css/*.css', 'dist/index.html', 'dist/projects/*.html']
 			},
 			html: {
 		    	files: ['src/includes/*.html', 'index.html'],
 		    	tasks: ['includereplace']
+			},
+			project: {
+				files: ['src/includes/projects/*.html'],
+				tasks: ['copy:project']
 			}
 		},
 		sass: {
@@ -35,6 +39,12 @@ module.exports = function(grunt) {
 				dest: 'dist',
 				expand: true,
 				cwd: 'src'
+			},
+			project: {
+				src: ['projects/*'],
+				dest: 'dist',
+				expand: true,
+				cwd: 'src/includes'
 			}
 		},
 		concat: {
@@ -45,7 +55,7 @@ module.exports = function(grunt) {
 		},
 		includereplace: {
 			files: {
-		    	src: 'index.html',
+		    	src: ['index.html', 'projects/*.html'],
 		    	dest: 'dist/'
 		  	}
 		},

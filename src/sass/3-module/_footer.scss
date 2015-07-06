@@ -7,12 +7,13 @@
 
 .footer__nav{
   @include container($wide-layout);
+  padding: 3em 0;
 }
 
 .footer__nav__list{
   @include span(7);
   @media screen and (min-width:$break-med){
-    @include container(20em);
+    @include container(21em);
     @include span(12);
   }
 }
