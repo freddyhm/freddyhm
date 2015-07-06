@@ -54,8 +54,14 @@ module.exports = function(grunt) {
 		  	}
 		},
 		includereplace: {
-			files: {
-		    	src: ['index.html', 'projects/*.html'],
+			index: {
+				src: ['index.html'],
+		    	dest: 'dist/'
+		  	},
+		  	projects: {
+		  		cwd: 'src/includes/',
+		  		expand: true,
+		    	src: ['projects/*.html'],
 		    	dest: 'dist/'
 		  	}
 		},
