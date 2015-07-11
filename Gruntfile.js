@@ -11,7 +11,7 @@ module.exports = function(grunt) {
 					livereload: true,
 					spawn: false
 				},
-				files: ['dist/css/*.css', 'dist/index.html', 'dist/projects/*.html']
+				files: ['dist/css/*.css', 'dist/*.html']
 			},
 			html: {
 		    	files: ['src/includes/**/*.html', 'index.html'],
