@@ -17,6 +17,7 @@
   max-width: 300px;
   height: 180px;
   width: 100%;
+  float: left;
 }
 
 .gallery__title{
@@ -54,79 +55,6 @@
 .gallery__overlay--over{
   transform: scale(0, 0);
   -webkit-transform: scale(0, 0);
-}
-
-.detail__page__section{
-  max-width: 100%;
-}
-
-.detail__control--back{
-  display: inline-block;
-  float: left;
-  position: absolute;
-  left: 0.25em;
-  opacity: 0.5;
-}
-
-.detail__content{
-  @include container(37.5em);
-  position: relative;
-  padding: 0 1em;
-}
-
-.detail__title{
-  font-weight: $light;
-  width: 80%;
-  float: left;
-  margin: 0 0 9px 25px;
-  text-align: left;
-}
-
-.detail__control__img--back{
-  width: 48px;
-  height: 48px;
-  margin-left: -4px;
-}
-
-.detail__description{
-  clear: left;
-  margin-left: 0;
-  margin-right: 0;
-  text-align: left;
-}
-
-.control__img__content{
-  opacity: 0.3; 
-}
-
-.role__list{
-  list-style-type: disc;
-  margin-left: 1em;
-}
-
-.role__item{
-  display: list-item;
-}
-
-.press__item, .tool__item{
-  width: 32%;
-}
-
-.press__image{
-  width: 150px;
-  height: 80px;
-}
-
-.tool__image{
-  width: 60px;
-  height: 60px;
-}
-
-.icon-apple2{
-  position: relative;
-  bottom: 4px;
-  font-size: 60px;
-  text-align: center;
 }
 
 @media screen and (min-width:$break-med){
