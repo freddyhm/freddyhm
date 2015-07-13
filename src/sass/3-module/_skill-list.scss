@@ -39,7 +39,7 @@
 .skill__level--8 .skill__unit:nth-of-type(-n+8),
 .skill__level--9 .skill__unit:nth-of-type(-n+9),
 .skill__level--10 .skill__unit:nth-of-type(n){
-  border: 2px solid #3779A0;
+  border: 2px solid $skill-unit-color;
 }
 
 @media screen and (min-width:$break-med){

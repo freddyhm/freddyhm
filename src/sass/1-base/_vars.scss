@@ -6,6 +6,7 @@
 $sirocco: #738685;
 $dove-gray: #666666;
 $ziggurat: #B8D5DB;
+$astral: #3779A0;
 $white:  #fff;
 $gray:   #aaa;
 $black:  #111;
@@ -30,6 +31,12 @@ $social-list-color: $sirocco;
 
 // Bar
 $bar-color: $sirocco;
+
+// Overlay
+$overlay-color: $astral;
+
+// Skills
+$skill-unit-color: $astral;
 
 
 
@@ -82,3 +89,7 @@ $desc-layout-width: 26em;
 
 // Skill 
 $skill-layout-width: 38.43em;
+
+// Gallery 
+$gallery-media-width: 300px;
+$gallery-media-height: 180px; 
