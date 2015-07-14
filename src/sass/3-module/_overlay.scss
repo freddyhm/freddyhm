@@ -27,11 +27,13 @@
   -webkit-transition: -webkit-transform 0.2s ease;
   transform: scale(0, 0);
   -webkit-transform: scale(0, 0);
+
 }
 
 .overlay--over{
   @media screen and (min-width:$break-lrg){
     transform: scale(1, 1);
     -webkit-transform: scale(1, 1);
+    cursor: pointer;
   }
 }

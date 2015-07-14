@@ -1,14 +1,16 @@
 
 $(function(){
 
-  var workItems = document.querySelectorAll('.work-item');
+  //$('.slick-slider').slick();
+
+  var workItems = document.querySelectorAll('.gallery__item');
 
   // write in plain javascript later 
-  $('.work-item').click(function(event) {
+  $('.gallery__item').click(function(event) {
 
     // hide our thumbs and show our work description
-    $('.work-list-wrap').addClass("work-list-wrap-hide");
-    $('.work-desc-wrap').addClass("work-desc-wrap-active");
+    $('.page-slider__first').addClass("page-slider__first--hide");
+    $('.page-slider__second').addClass("page-slider__second--active");
     
     // get project name
     var projName = $(this).attr("data-folder");
@@ -18,11 +20,10 @@ $(function(){
     event.preventDefault();
   });
 
-  $('.desc-btn-back').click(function(event) {
+  $('.detail__control__img--back').click(function(event) {
     // hide work description and show thumbs
-    $('.work-list-wrap').removeClass("work-list-wrap-hide");
-    $('.work-desc-wrap').removeClass("work-desc-wrap-active");
-    $('.work-desc-list').addClass(".work-desc-list-hide");
+    $('.page-slider__first').removeClass("page-slider__first--hide");
+    $('.page-slider__second').removeClass("page-slider__second--active");
     event.preventDefault();
   });
 
@@ -31,8 +32,8 @@ $(function(){
     // add hover effect for all items in our work list
     workItems[i].addEventListener('mouseover', function() {
       for (var i = 0; i < this.childNodes.length; i++) {
-        if(this.childNodes[i].className === "work-overlay"){
-            this.childNodes[i].classList.toggle("work-overlay-over");
+        if(this.childNodes[i].className === "overlay"){
+            this.childNodes[i].classList.toggle("overlay--over");
         }
       }
     });
@@ -41,16 +42,16 @@ $(function(){
       for (var i = 0; i < this.childNodes.length; i++) {
 
         console.log(this.childNodes[0]);
-        if(this.childNodes[i].classList.contains("work-overlay-over")){
-            this.childNodes[i].classList.remove("work-overlay-over");
+        if(this.childNodes[i].classList.contains("overlay--over")){
+            this.childNodes[i].classList.remove("overlay--over");
         }
       }
     });
   }
 
   function loadWorkDetails(projID){
-    var htmlURL = projID + '.html #js-work-content';
-    $('#js-work-load').load(htmlURL);
+    var htmlURL = projID + '.html #js-detail__content';
+    $('#js-detail__load').load(htmlURL);
   }
 
   var clientItems =  $(".client-item").map(function(){ return $(this).data("client"); }).get(),  
