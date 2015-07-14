@@ -1,7 +1,7 @@
 
 $(function(){
 
-  //$('.slick-slider').slick();
+  //$('.slick-slider').slick();  
 
   var workItems = document.querySelectorAll('.gallery__item');
 

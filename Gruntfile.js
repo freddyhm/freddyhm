@@ -11,11 +11,19 @@ module.exports = function(grunt) {
 					livereload: true,
 					spawn: false
 				},
-				files: ['dist/css/*.css', 'dist/*.html']
+				files: ['dist/css/*.css', 'dist/*.html', 'dist/js/**/*.js']
 			},
 			html: {
 		    	files: ['src/includes/**/*.html', 'index.html'],
 		    	tasks: ['includereplace']
+			},
+			vendorjs: {
+				files: ['src/js/vendor/**/*.js'],
+				tasks: ['copy']
+			},
+			js: {
+				files: ['src/js/*.js'],
+				tasks: ['concat']
 			}
 		},
 		sass: {
@@ -35,12 +43,6 @@ module.exports = function(grunt) {
 				dest: 'dist',
 				expand: true,
 				cwd: 'src'
-			},
-			project: {
-				src: ['projects/*'],
-				dest: 'dist',
-				expand: true,
-				cwd: 'src/includes'
 			}
 		},
 		concat: {
