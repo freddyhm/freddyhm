@@ -44,7 +44,7 @@ $(function(){
     var htmlURL = projID + '.html #js-detail__content';
     $('#js-detail__load').load(htmlURL, function(){
         
-        $('.detail__control__img--back').click(function(event) {
+        $('.control__img--back').click(function(event) {
           // hide work description and show thumbs
           $('.page-slider__first').removeClass("page-slider__first--hide");
           $('.page-slider__second').removeClass("page-slider__second--active");

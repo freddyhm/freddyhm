@@ -1,0 +1,158 @@
+/**
+* @name         Testimonial 
+* @requires
+*/
+
+/* :: CONTROLS ------------ */
+
+.testimonial__control{
+	display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.controls{
+	position: absolute;
+	top: 50%;
+	cursor: pointer;
+}
+
+.control--prev{
+	left: 10px;
+}
+
+.control--next{
+	right: 10px;
+}
+
+
+/* CLIENT WRAPPER*/
+
+.client-item{
+  display: none;
+}
+
+.client-item-active{
+  display: block;
+}
+
+
+.client-details{
+  text-align: center; 
+}
+
+.client-name{
+  margin-bottom: 0;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+}
+
+.client-position{
+  margin-top: 0;
+  font-size: 0.8em;
+  font-weight: 400;
+  color: #999;
+}
+
+/* QUOTE */
+
+.client-quote{
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.client-quote-mark{
+  width: 58px;
+  height: 58px;
+  position: absolute;
+  z-index: -1;
+  left: 6px;
+  top: -17px;
+}
+
+.client-quote-mark svg{
+  width: inherit;
+}
+
+.client-quote-mark path{
+  fill: #f1e2d6;
+}
+
+.client-quote-msg{
+  margin: 30px 30px;
+  font-size: 1.2em;
+  line-height: 2;
+  font-weight: 100;
+}
+
+/* CLIENT LOGOS */
+
+.client-logo-list{
+  display: none;
+}
+
+/* -----------
+  :: Desktop
+  ---------- */
+
+@media screen and (min-width:760px){
+
+  /* CLIENT WRAPPER / FACE / QUOTE */
+
+  .client-info{
+    float: left;
+    margin-top: 45px;
+  }
+
+  .client-quote{
+    float: right;
+  }
+
+  .client-quote-mark{
+    top: 6px;
+    left: -9px;
+  }
+
+  .client-quote-msg{
+    line-height: 1.8;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .client-item{
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .client-item:after{
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* CLIENT LOGOS */
+
+  .client-logo-list{
+    display: block;
+    margin:0 auto;
+    max-width: 800px;  
+  }
+
+  .client-logo-item{
+    display: inline-block;
+    opacity: 0.5;
+    margin:20px;
+    padding-bottom: 20px;
+  }
+
+  .client-logo-item-active{
+    opacity: 1;
+    border-bottom: 4px solid #c99065;
+  }
+}

@@ -34,8 +34,9 @@ $susy: (
 }
 
 .section{
-	@extend %clearfix;
+	position: relative;
 	@include container($main-layout);
+	@extend %clearfix;
 }
 
 .section__wrapper{
