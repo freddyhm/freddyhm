@@ -1,8 +1,6 @@
 
 $(function(){
 
-  //$('.slick-slider').slick();  
-
   var workItems = document.querySelectorAll('.gallery__item');
 
   // write in plain javascript later 
@@ -17,13 +15,6 @@ $(function(){
 
     // load our html and set project properties
     loadWorkDetails(projName);
-    event.preventDefault();
-  });
-
-  $('.detail__control__img--back').click(function(event) {
-    // hide work description and show thumbs
-    $('.page-slider__first').removeClass("page-slider__first--hide");
-    $('.page-slider__second').removeClass("page-slider__second--active");
     event.preventDefault();
   });
 
@@ -51,7 +42,17 @@ $(function(){
 
   function loadWorkDetails(projID){
     var htmlURL = projID + '.html #js-detail__content';
-    $('#js-detail__load').load(htmlURL);
+    $('#js-detail__load').load(htmlURL, function(){
+        
+        $('.detail__control__img--back').click(function(event) {
+          // hide work description and show thumbs
+          $('.page-slider__first').removeClass("page-slider__first--hide");
+          $('.page-slider__second').removeClass("page-slider__second--active");
+          event.preventDefault();
+        });  
+
+        $(".slider").slick();
+    });
   }
 
   var clientItems =  $(".client-item").map(function(){ return $(this).data("client"); }).get(),  
