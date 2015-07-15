@@ -27,10 +27,28 @@
 	cursor: pointer;
 }
 
-.control--prev{
-	left: 10px;
+.testimonial__control--prev{
+  left: -16%;
+  @media screen and (min-width:$break-control-x-sm){
+    left: -12%;
+  }
+  @media screen and (min-width:$break-control-sm){
+    left: -8%;
+  }
+  @media screen and (min-width:$break-lrg){
+    left: 0%;
+  }
 }
 
-.control--next{
-	right: 10px;
+.testimonial__control--next{
+  right: -23%;
+  @media screen and (min-width:$break-control-x-sm){
+    right: -19%;
+  }
+  @media screen and (min-width:$break-control-sm){
+    right: -8%;
+  }
+	@media screen and (min-width:$break-lrg){
+    right: 0%;
+  }
 }

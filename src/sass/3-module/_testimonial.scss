@@ -14,21 +14,38 @@
   bottom: 0;
 }
 
+.testimonial__slider{
+  width: 100%;
+  max-width: 26.37em;
+  margin: 0 auto;
+
+  @media screen and (min-width:$break-lrg){
+    width: 37.5em;
+  }
+}
+
+.testimonial__item{
+   width: 100%;
+  max-width: 26.37em;
+  @media screen and (min-width:$break-lrg){
+    width: 37.5em;
+  }
+}
+
 /* :: DETAILS ------------ */
 
 .testimonial__person{
   @media screen and (min-width:$break-med){
-    float: left;
     margin-top: 45px;
+  }
+
+  @media screen and (min-width:$break-lrg){
+    float: left;
   }
 }
 
 .testimonial__detail{
   text-align: center;
-}
-
-.testimonial__item{
-  @include container(37.5em);
 }
 
 .testimonial__item:after{
