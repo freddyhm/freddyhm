@@ -33,12 +33,10 @@ $social-list-color: $sirocco;
 $bar-color: $sirocco;
 
 // Overlay
-$overlay-color: $astral;
+$overlay-color: rgba(55, 121, 160, 0.7);
 
 // Skills
 $skill-unit-color: $astral;
-
-
 
 // :: TYPOGRAPHY ------------ //
 
@@ -81,17 +79,25 @@ $medium-layout: 85%;
 $wide-layout: 90%;
 $full-layout: 100%;
 
-// Media queries 
-$break-sm: 480px;
-$break-med: 640px;
-$break-lrg: 960px;
 
 // Description
 $desc-layout-width: 26em; 
 
 // Skill 
-$skill-layout-width: 38.43em;
+$skill-layout-width: 14.43em;
+$skill-layout-width-lrg: 40.43em;
 
 // Gallery 
 $gallery-media-width: 300px;
-$gallery-media-height: 180px; 
+$gallery-media-height: 180px;
+
+// :: BREAKPOINTS ------------ //
+
+// General
+$break-sm: 480px;
+$break-med: 640px;
+$break-lrg: 960px; 
+
+// Skills
+$break-skill-med: 720px;
+

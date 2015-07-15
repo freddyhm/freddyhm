@@ -13,6 +13,13 @@ $susy: (
 	gutter-position: split
 );
 
+$skill-layout: (
+  columns: 2,
+  math: static,
+  column-width: 14.375em
+);
+
+
 @include layout(12);
 @include border-box-sizing;
 
@@ -30,7 +37,7 @@ $susy: (
 /* :: SECTIONS ------------ */
 
 .section, .section__wrapper{
-	padding: 3.125em 0;
+	padding: 4em 0;
 }
 
 .section{
@@ -44,5 +51,5 @@ $susy: (
 }
 
 .section--wrapped{
-	padding-bottom: 0;
+	padding: 0;
 }

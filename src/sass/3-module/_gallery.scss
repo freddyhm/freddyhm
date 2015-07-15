@@ -8,8 +8,9 @@
 }
 
 .gallery__subsection{
+  padding-top: 0;
   @media screen and (min-width: $break-med){
-      @include container($full-layout); 
+      @include container($medium-layout); 
   }
 }
 

@@ -6,6 +6,9 @@
 .header{
   padding-top: 2.5em;
   padding-bottom: 6.2em;
+  @media screen and (min-width:$break-med){
+    padding-bottom: 13.2em;
+  }
 }
 
 .header__title,
@@ -21,7 +24,9 @@
 }
 
 .hero{
-  background: url('../img/sunny-beach.jpg') center center;
+  //background: url('../img/sunny-beach.jpg') center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2) ), url('../img/sunny-beach.jpg');
+  background-position: center center;
   background-size: cover;
 }
 
@@ -31,6 +36,7 @@
   margin-top: 1.5em;
   font-weight: 700;
   @media screen and (min-width:$break-med){
+    font-size: $large-font;
   }
 }
 
@@ -40,8 +46,18 @@
 
 /* :: HEADER NAV ------------ */
 
+.header__nav{
+  min-width: 10.87em;
+}
+
 .header__nav__list{
-  text-align: left;
+  
+  text-align: center;
+  
+  @media screen and (min-width:$break-sm){
+    text-align: left;
+  }
+  
   @media screen and (min-width:$break-med){
     float: right;
   }

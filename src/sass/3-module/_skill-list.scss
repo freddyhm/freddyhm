@@ -4,14 +4,27 @@
 */
 
 .skill__list{
-  @media screen and (min-width:$break-med){
-    @include container($skill-layout-width);
+  margin: 2em 0;
+  @include container($skill-layout-width);
+  @media screen and (min-width:$break-skill-med){
+    @include container($skill-layout-width-lrg);
   }
 }
 
 .skill__item{
 	display: inline;
 	text-align: left;
+  @media screen and (min-width:$break-skill-med){
+    @include with-layout($skill-layout){
+      @include span(1);  
+    }
+  }
+}
+
+.skill__item:nth-of-type(odd){
+  @media screen and (min-width:$break-skill-med){
+    float: right;
+  }
 }
 
 .skill__unit{
@@ -40,10 +53,4 @@
 .skill__level--9 .skill__unit:nth-of-type(-n+9),
 .skill__level--10 .skill__unit:nth-of-type(n){
   border: 2px solid $skill-unit-color;
-}
-
-@media screen and (min-width:$break-med){
-	.skill__item{
-		@include span(6);
-	}
 }
