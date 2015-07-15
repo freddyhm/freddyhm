@@ -15,26 +15,6 @@
   padding: 0 1em;
 }
 
-/* :: CONTROLS ------------ */
-
-.detail__control--back{
-  display: inline-block;
-  float: left;
-  position: absolute;
-  left: 0.25em;
-  opacity: 0.5;
-}
-
-.control__img--back{
-  width: 48px;
-  height: 48px;
-  margin-left: -4px;
-}
-
-.control__img__content{
-  opacity: 0.3; 
-}
-
 /* :: TYPOGRAPHY ------------ */
 
 .detail__title{

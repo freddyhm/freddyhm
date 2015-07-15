@@ -1,6 +1,11 @@
 
 $(function(){
 
+  $(".slider").slick({
+    prevArrow: ".control--prev",
+    nextArrow: ".control--next"
+  });
+
   var workItems = document.querySelectorAll('.gallery__item');
 
   // write in plain javascript later 

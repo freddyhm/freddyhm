@@ -1,0 +1,36 @@
+/**
+* @name         Control  
+* @requires     
+*/
+
+.control--back{
+  display: inline-block;
+  float: left;
+  position: absolute;
+  left: 0.25em;
+  opacity: 0.5;
+}
+
+.control__img--back{
+  width: 48px;
+  height: 48px;
+  margin-left: -4px;
+}
+
+.control__img__content{
+  opacity: 0.3; 
+}
+
+.controls{
+	position: absolute;
+	top: 50%;
+	cursor: pointer;
+}
+
+.control--prev{
+	left: 10px;
+}
+
+.control--next{
+	right: 10px;
+}
