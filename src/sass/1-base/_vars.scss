@@ -5,7 +5,10 @@
 // Colors - Source: http://chir.ag/projects/name-that-color/
 $sirocco: #738685;
 $dove-gray: #666666;
+$gray-chateau: #A0A5A8;
 $ziggurat: #B8D5DB;
+$horizon: #588A9E;
+$cornflower: #82C8E4;
 $astral: #3779A0;
 $white:  #fff;
 $gray:   #aaa;
@@ -41,6 +44,10 @@ $skill-unit-color: $astral;
 
 // Contact
 $address-hover-color: $white;
+
+// Form
+$form-color: $horizon;
+$form-hover-color: $gray-chateau;
 
 // :: TYPOGRAPHY ------------ //
 
@@ -109,3 +116,7 @@ $break-skill-med: 720px;
 $break-control-x-sm: 230px;
 $break-control-sm: 560px;
 
+// Social List
+$break-social-sm: 300px;
+
+$break-footer-x-sm: 360px;

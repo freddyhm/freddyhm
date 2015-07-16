@@ -4,10 +4,13 @@
 
 .address{
 	text-align: center;
-	font-size: $big-font;
-  	font-weight: $light;
-  	font-style: normal;
-
+	font-size: $medium-font;
+	font-weight: $regular;
+	font-style: normal;
+	@media screen and (min-width:$break-social-sm){
+		font-size: $big-font;
+		font-weight: $light;
+	}
 	@media screen and (min-width:$break-sm){
 		font-size: $biggest-font;		
 	}

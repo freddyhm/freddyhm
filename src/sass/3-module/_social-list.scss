@@ -13,7 +13,20 @@
 }
 
 .social__item{
-	@include span(4);
+	@include span(6);
+	@media screen and (min-width:$break-social-sm){
+		@include span(4);
+	}
+	
+	// move third item to its own rowf for small screens
+	&:nth-of-type(n+3){
+		@include span(12);
+		margin-top: 2em;
+		@media screen and (min-width:$break-social-sm){
+			margin-top: 0;
+			@include span(4);
+		}
+	}
 }
 
 .social__link{

@@ -14,7 +14,7 @@
 }
 
 .form__field, .form__details, .form__submit{
-	border: 3px solid #c99065;
+	border: 3px solid $form-color;
   	padding: 10px;
 }
 
@@ -26,6 +26,7 @@
 
 .form__label{
 	font-size: $small-font;
+	text-transform: uppercase;
 }
 
 .form__name{
@@ -33,14 +34,16 @@
 }
 
 .form__submit{
-	background-color: #c99065;
+	background-color: $form-color;
 	color: #fff;
 	padding: 10px;
 	font-size: 18px;
 	margin-top: 20px;
-
 	@media screen and (min-width:$break-med){
   		@include span(4 of last);
+  	}
+  	&:hover{
+  		background-color: $form-hover-color;
   	}
 }
 

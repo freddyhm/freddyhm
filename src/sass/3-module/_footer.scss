@@ -11,17 +11,17 @@
 }
 
 .footer__nav__list{
-  @include span(7);
-  @media screen and (min-width:$break-med){
-    @include container(21em);
-    @include span(12);
+  float: left;
+  text-align: center;
+  @media screen and (min-width:$break-sm){
+    text-align: left;
   }
 }
 
 .footer__nav__item{
-  @include span(6);
+  padding-right: 0.95em;
   @media screen and (min-width:$break-med){
-    @include span(3);
+    padding-right: 3em;
   }
 }
 
@@ -30,4 +30,13 @@
 .footer__copyright{
   @include span(12);
   clear: both;
+  margin-top: 1em;
+  font-size: $small-font;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.6);
+  @media screen and (min-width:$break-footer-x-sm){
+    margin-top: 0;
+    text-align: left;
+  }
 }
