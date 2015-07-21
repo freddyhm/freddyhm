@@ -27,6 +27,8 @@
 	cursor: pointer;
 }
 
+/* TESTIMONIAL CONTROLS */
+
 .testimonial__control--prev{
   left: -16%;
   @media screen and (min-width:$break-control-x-sm){
@@ -43,7 +45,7 @@
 .testimonial__control--next{
   right: -23%;
   @media screen and (min-width:$break-control-x-sm){
-    right: -19%;
+    right: -14%;
   }
   @media screen and (min-width:$break-control-sm){
     right: -8%;

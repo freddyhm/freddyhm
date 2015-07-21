@@ -17,18 +17,19 @@
 .testimonial__slider{
   width: 100%;
   max-width: 26.37em;
-  margin: 0 auto;
-
+  margin: 4em auto;
   @media screen and (min-width:$break-lrg){
     width: 37.5em;
+    max-width: 37.5em;
   }
 }
 
 .testimonial__item{
-   width: 100%;
+  width: 100%;
   max-width: 26.37em;
   @media screen and (min-width:$break-lrg){
     width: 37.5em;
+    max-width: 37.5em;
   }
 }
 

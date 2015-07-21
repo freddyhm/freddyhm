@@ -2,8 +2,8 @@
 $(function(){
 
   $(".slider").slick({
-    prevArrow: ".control--prev",
-    nextArrow: ".control--next"
+    prevArrow: ".testimonial__control--prev",
+    nextArrow: ".testimonial__control--next"
   });
 
   var workItems = document.querySelectorAll('.gallery__item');
