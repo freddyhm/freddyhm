@@ -63,3 +63,24 @@
     right: 0%;
   }
 }
+
+/* :: CONTROLS -------------- */
+
+.detail__control__wrapper{
+  display: none;
+  @media screen and (min-width:$break-lrg){
+    display: block;
+  }
+}
+
+.detail__controls{
+  top: 33%;
+}
+
+.detail__control--prev{
+  left: -15%;
+}
+
+.detail__control--next{
+  right: -15%;
+}
