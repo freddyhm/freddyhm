@@ -9,7 +9,7 @@
 
 .page-slider__content{
 	width: 200%;
-  	@extend %clearfix;
+  	@include susy-clearfix;
 }
 
 .page-slider__first{

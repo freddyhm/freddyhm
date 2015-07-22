@@ -19,20 +19,8 @@ $skill-layout: (
   column-width: 14.375em
 );
 
-
 @include layout(12);
 @include border-box-sizing;
-
-/* :: FIXES ------------ */
-
-// Clear fix
-%clearfix{
-	&:after{
-		content: "";
-		display: table;
-		clear: both;
-	}
-}
 
 /* :: SECTIONS ------------ */
 
@@ -43,7 +31,7 @@ $skill-layout: (
 .section{
 	position: relative;
 	@include container($main-layout);
-	@extend %clearfix;
+	@include susy-clearfix;
 }
 
 .section__wrapper{

@@ -1,9 +1,14 @@
 
 $(function(){
 
-  $(".slider").slick({
+  $(".testimonial__slider").slick({
     prevArrow: ".testimonial__control--prev",
     nextArrow: ".testimonial__control--next"
+  });
+
+  $(".detail__slider").slick({
+    prevArrow: ".detail__control--prev",
+    nextArrow: ".detail__control--next"
   });
 
   var workItems = document.querySelectorAll('.gallery__item');
@@ -49,14 +54,17 @@ $(function(){
     var htmlURL = projID + '.html #js-detail__content';
     $('#js-detail__load').load(htmlURL, function(){
         
-        $('.control__img--back').click(function(event) {
+        $('#js-control--back').click(function(event) {
           // hide work description and show thumbs
           $('.page-slider__first').removeClass("page-slider__first--hide");
           $('.page-slider__second').removeClass("page-slider__second--active");
           event.preventDefault();
         });  
 
-        $(".slider").slick();
+        $(".detail__slider").slick({
+          prevArrow: ".detail__control--prev",
+          nextArrow: ".detail__control--next"
+        });
     });
   }
 

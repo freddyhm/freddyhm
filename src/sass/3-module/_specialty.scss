@@ -4,7 +4,7 @@
 */
 
 .specialty{
-	@extend %clearfix;
+	@include susy-clearfix;
 }
 
 .specialty__item{

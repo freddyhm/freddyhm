@@ -3,16 +3,7 @@
 * @requires
 */
 
-/* :: CONTROL ------------ */
-
-.testimonial__control{
-	position: absolute;
-  display: block;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
+/* :: SLIDER ------------ */
 
 .testimonial__slider{
   width: 100%;
@@ -50,7 +41,7 @@
 }
 
 .testimonial__item:after{
-  @extend %clearfix
+  @include susy-clearfix;
 }
 
 .testimonial__item--hidden{

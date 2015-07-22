@@ -4,7 +4,7 @@
 */
 
 .nav{
-	@extend %clearfix;
+	@include susy-clearfix;
 }
 
 .nav__item{
