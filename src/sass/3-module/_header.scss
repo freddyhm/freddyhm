@@ -15,19 +15,30 @@
 .header__subtitle{
   color: $white;
 }
-
+ 
 .header__wrapper{
   @include container($main-layout);
   @media screen and (min-width:$break-med){
     @include container($full-layout);
-  }
+  } 
 }
 
 .hero{
   //background: url('../img/sunny-beach.jpg') center center;
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2) ), url('../img/sunny-beach.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2) ), 
+               url('../img/sunny-beach-480-small.jpg');
   background-position: center center;
   background-size: cover;
+  @media screen and (min-width:$break-med){
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2) ), url('../img/sunny-beach-960-medium.jpg');
+    background-position: center center;
+  background-size: cover;
+  }
+  @media screen and (min-width:$break-lrg){
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2) ), url('../img/sunny-beach-1920-large.jpg');
+    background-position: center center;
+  background-size: cover;
+  }
 }
 
 /* :: HEADER TITLES ------------ */
