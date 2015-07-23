@@ -1,42 +1,21 @@
 module.exports = function(grunt) {
+
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
-		imagemin: {
-		    png: {
-		      options: {
-		        optimizationLevel: 7
-		      },
-		      files: [
-		        {
-		          // Set to true to enable the following options…
-		          expand: true,
-		          // cwd is 'current working directory'
-		          cwd: 'project-directory/img/',
-		          src: ['**/*.png'],
-		          // Could also match cwd line above. i.e. project-directory/img/
-		          dest: 'project-directory/img/compressed/',
-		          ext: '.png'
-		        }
-		      ]
+		tinypng: {
+		    options: {
+		        apiKey: "gkYVEg3qZfmpilH5Px2ng8hp28UrUctl",
+		        summarize: true,
+		        showProgress: true,
+		        stopOnImageError: true
 		    },
-		    jpg: {
-		      options: {
-		        progressive: true
-		      },
-		      files: [
-		        {
-		          // Set to true to enable the following options…
-		          expand: true,
-		          // cwd is 'current working directory'
-		          cwd: 'project-directory/img/',
-		          src: ['**/*.jpg'],
-		          // Could also match cwd. i.e. project-directory/img/
-		          dest: 'project-directory/img/compressed/',
-		          ext: '.jpg'
-		        }
-		      ]
+		    compress: {
+		        expand: true, 
+		        src: ['src/img/**/*.{png,jpg}'], 
+		        cwd: 'src/img/',
+		        dest: 'src/img/'
 		    }
-		 },
+    	},
 		responsive_images: {
 	      dev: {
 	        options: {
@@ -129,14 +108,14 @@ module.exports = function(grunt) {
 	});
 
 	grunt.loadNpmTasks('grunt-sass');
-	grunt.loadNpmTasks('grunt-contrib-imagemin');
+	grunt.loadNpmTasks('grunt-image');
+	grunt.loadNpmTasks('grunt-tinypng');
 	grunt.loadNpmTasks('grunt-responsive-images');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-include-replace');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 
-	grunt.registerTask('imagemin', ['imagemin']);
 	grunt.registerTask('setup', ['sass', 'copy', 'concat', 'includereplace']);
 	grunt.registerTask('default', ['watch']);
 };
