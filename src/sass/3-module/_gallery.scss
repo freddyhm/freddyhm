@@ -1,6 +1,6 @@
 /**
 * @name         Gallery    
-* @requires     _layout.scss
+* @requires     _layout.scss, _vars.scss
 */
 
 .gallery__section{
@@ -9,16 +9,19 @@
 
 .gallery__subsection{
   padding-top: 0;
-  @media screen and (min-width: $break-med){
+  @media screen and (min-width: $break-lrg){
       @include container($medium-layout); 
   }
 }
 
-.gallery__image{
+.gallery__list{
+  margin: 0 auto;
+}
+
+.gallery__media{
   float: left;
+  max-width: 600px;
   width: 100%;
-  max-width: $gallery-media-width;
-  height: $gallery-media-height;
 }
 
 .gallery__title{
@@ -32,13 +35,8 @@
 }
 
 .gallery__item{
-  @media screen and (min-width:$break-med){
-    @include span(4);
-    
-  }
-
   @media screen and (min-width:$break-lrg){
+    @include span(4);
     position: relative;
   }
 }
-

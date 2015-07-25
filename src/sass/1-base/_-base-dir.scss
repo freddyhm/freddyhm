@@ -1,7 +1,8 @@
-// @name 	base directory
-// @desc 	imports core styles 
-
-@import 'reset';
+/**
+* @name     	Base  
+* @requires     Base files
+*/
+@import 'vendor/-vendor-dir';
 @import 'vars';
 @import 'layout';
 @import 'fonts';

@@ -1,23 +1,20 @@
 /**
 * @name         Skip links    
-* @requires     Susy
 */
 
 // skip links for accessibility 
 
 .link__skip-all a{
-  padding: 6px;
   position: absolute;
   top: -40px;
   left: 0;
-  color: white;
-  font-weight: bold;
+  padding: 6px;
   border-bottom: 1px solid white;
   border-right: 1px solid white;
   border-bottom-right-radius: 8px;
-  -webkit-transition: top 1s ease-out, background 1s linear;
-  -o-transition: top 1s ease-out, background 1s linear;
+  font-weight: bold;
   transition: top 1s ease-out, background 1s linear;
+  color: white;
 }
 
 .link__skip-all a:focus{
@@ -25,7 +22,5 @@
   left: 0;
   top: 0;
   background-color: darkred;
-  -webkit-transition: top .1s ease-in, background .5s linear;
-  -o-transition: top .1s ease-in, background .5s linear;
   transition: top .1s ease-in, background .5s linear;
 }

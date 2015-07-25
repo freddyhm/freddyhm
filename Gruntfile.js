@@ -11,7 +11,7 @@ module.exports = function(grunt) {
 		    },
 		    compress: {
 		        expand: true, 
-		        src: ['src/img/**/*.{png,jpg}'], 
+		        src: ['**/*.{png,jpg}'], 
 		        cwd: 'src/img/',
 		        dest: 'src/img/'
 		    }
@@ -20,26 +20,23 @@ module.exports = function(grunt) {
 	      dev: {
 	        options: {
 	          engine: 'im',
+	          aspectRatio: false,
 	          sizes: [{
-	            width: 1920,
-	            suffix: '-large',
-	            quality: 100
+	            width: 320,
+	            height: 160,
+	            suffix: '-sm'
 	          },{
-	            width: 960,
-	            suffix: '-medium',
-	            quality: 100
-	          },{
-	            width: 480,
-	            suffix: '-small',
-	            quality: 100
+	            width: 600,
+	            height: 375,
+	            suffix: '-med'
 	          }
 	          ]
 	        },
 	        files: [{
 	          expand: true,
-	          src: ['sunny-beach.jpg'],
-	          cwd: 'src/img/',
-	          dest: 'dist/img/'
+	          src: ['thumb.jpg'],
+	          cwd: 'src/img/work/proj-3/',
+	          dest: 'src/img/work/proj-3/'
 	        }]
 	      }
 	    },
@@ -70,18 +67,18 @@ module.exports = function(grunt) {
 		},
 		sass: {
 			options: {
-				//sourceMap: true,
-			//	outputStyle: 'compressed'
+				sourceMap: true,
+				outputStyle: 'compressed'
 			},
 			dist: {
 				files: {
-					'dist/css/styles.css': 'src/sass/all.scss'
+					'dist/css/styles.min.css': 'src/sass/all.scss'
 				}
 			}
 		},
 		copy: {
 			dist: {
-				src: ['js/vendor/**/*.js', 'img/**/*', 'css/fonts/*'],
+				src: ['js/vendor/**/*.js', 'img/**/*'],
 				dest: 'dist',
 				expand: true,
 				cwd: 'src'
@@ -89,9 +86,19 @@ module.exports = function(grunt) {
 		},
 		concat: {
 		  	js: {
-		    	src: ['src/js/*.js'],
-		    	dest: 'dist/js/main.js'
+		    	src: ['src/js/vendor/jquery-1.11.3.js', 'src/js/vendor/slick.js', 'src/js/main.js'],
+		    	dest: 'src/js/custom.js'
 		  	}
+		},
+		uglify: {
+		   dist: {
+		      options: {
+		         sourceMap: true
+		      },
+		      files: {
+		         'dist/js/custom.min.js': ['src/js/custom.js'],
+		      }
+		   }
 		},
 		includereplace: {
 			index: {
@@ -104,7 +111,7 @@ module.exports = function(grunt) {
 		    	src: ['*.html'],
 		    	dest: 'dist/'
 		  	}
-		},
+		}
 	});
 
 	grunt.loadNpmTasks('grunt-sass');
@@ -112,10 +119,12 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-tinypng');
 	grunt.loadNpmTasks('grunt-responsive-images');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-include-replace');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 
-	grunt.registerTask('setup', ['sass', 'copy', 'concat', 'includereplace']);
+	grunt.registerTask('setup', ['sass', 'concat', 'uglify', 'includereplace', 'copy']);
+	grunt.registerTask('js', ['concat', 'uglify', 'copy']);
 	grunt.registerTask('default', ['watch']);
 };

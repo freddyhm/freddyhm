@@ -1,21 +1,26 @@
 /**
 * @name         Control  
-* @requires     
+* @requires     _vars.scss
 */
 
 .control__wrapper{
   position: absolute;
+  display: block; 
   z-index: -1;
-  display: block;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
 }
 
-.control--back{
-  display: inline-block;
+.control{
   position: absolute;
+  z-index: 10;
+  top: 50%;
+  cursor: pointer;
+}
+
+.control--back{
   left: -6.75em;
   opacity: 0.5;
 }
@@ -27,13 +32,6 @@
 
 .control__img__content{
   opacity: 0.3; 
-}
-
-.controls{
-	position: absolute;
-  z-index: 10;
-	top: 50%;
-	cursor: pointer;
 }
 
 /* TESTIMONIAL CONTROLS */
@@ -64,7 +62,7 @@
   }
 }
 
-/* :: CONTROLS -------------- */
+/* :: DETAIL CONTROLS -------------- */
 
 .detail__control__wrapper{
   display: none;
@@ -73,7 +71,7 @@
   }
 }
 
-.detail__controls{
+.detail__control{
   top: 33%;
 }
 

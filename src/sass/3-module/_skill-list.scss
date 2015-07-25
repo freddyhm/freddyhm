@@ -1,6 +1,6 @@
 /**
 * @name         Skill List    
-* @requires     _layout.scss
+* @requires     _layout.scss. _vars.scss
 */
 
 .skill__list{
@@ -29,11 +29,11 @@
 
 .skill__unit{
   display: inline-block;
+  margin-right: 5px;
   padding: 5px;
-  background-color: white;
   border-radius: 50%;
   border: 2px solid #e5eaee;
-  margin-right: 5px;
+  background-color: white;
 }
 
 .skill__title{

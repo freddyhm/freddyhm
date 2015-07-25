@@ -1,8 +1,12 @@
-// @name 	Variables
+/**
+* @name         Variables
+*/
 
 // :: COLORS ------------ //
 
 // Colors - Source: http://chir.ag/projects/name-that-color/
+$pot-pourri: #F1E2D6;
+$dusty-gray: #999999;
 $sirocco: #738685;
 $dove-gray: #666666;
 $gray-chateau: #A0A5A8;
@@ -13,6 +17,7 @@ $astral: #3779A0;
 $white:  #fff;
 $gray:   #aaa;
 $black:  #111;
+
 
 // Sections
 $brand-color: $ziggurat;
@@ -48,6 +53,10 @@ $address-hover-color: $white;
 // Form
 $form-color: $horizon;
 $form-hover-color: $gray-chateau;
+
+// Testimonial
+$testimonial-position: $dusty-gray;
+$testimonial-quote-img: $pot-pourri;
 
 // :: TYPOGRAPHY ------------ //
 
@@ -90,11 +99,15 @@ $medium-layout: 85%;
 $wide-layout: 90%;
 $full-layout: 100%;
 
-
 // Description
 $desc-layout-width: 26em; 
 
 // Skill 
+$skill-layout: (
+  columns: 2,
+  math: static,
+  column-width: 14.375em
+);
 $skill-layout-width: 14.43em;
 $skill-layout-width-lrg: 40.43em;
 
@@ -118,5 +131,4 @@ $break-control-sm: 560px;
 
 // Social List
 $break-social-sm: 300px;
-
 $break-footer-x-sm: 360px;

@@ -1,5 +1,6 @@
 /**
-* @name 	Addresss    
+* @name 		Addresss    
+* @requires     _vars.scss
 */
 
 .address{
@@ -14,10 +15,8 @@
 	@media screen and (min-width:$break-sm){
 		font-size: $biggest-font;		
 	}
+	&__link:hover{
+		color: $address-hover-color;
+	}
 }
-
-.address__link:hover{
-	color: $address-hover-color;
-}
-
   

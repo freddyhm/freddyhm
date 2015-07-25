@@ -1,6 +1,6 @@
 /**
 * @name         Header
-* @requires     _layout.scss
+* @requires     _layout.scss, _vars.scss
 */
 
 .header{ 
@@ -24,7 +24,6 @@
 }
 
 .hero{
-  //background: url('../img/sunny-beach.jpg') center center;
   background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2) ), 
                url('../img/sunny-beach-480-small.jpg');
   background-position: center center;
@@ -32,12 +31,12 @@
   @media screen and (min-width:$break-med){
     background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2) ), url('../img/sunny-beach-960-medium.jpg');
     background-position: center center;
-  background-size: cover;
+    background-size: cover;
   }
   @media screen and (min-width:$break-lrg){
     background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2) ), url('../img/sunny-beach-1920-large.jpg');
     background-position: center center;
-  background-size: cover;
+    background-size: cover;
   }
 }
 
@@ -59,16 +58,14 @@
 
 .header__nav{
   min-width: 10.87em;
-}
-
-.header__nav__list{
-  text-align: center;
-  @media screen and (min-width:$break-sm){
-    text-align: left;
-  }
-  
-  @media screen and (min-width:$break-med){
-    float: right;
+  &__list{
+      text-align: center;
+      @media screen and (min-width:$break-sm){
+        text-align: left;
+      }
+      @media screen and (min-width:$break-med){
+        float: right;
+      }
   }
 }
 

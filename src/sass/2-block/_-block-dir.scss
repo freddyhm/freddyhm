@@ -1,6 +1,7 @@
-// @name 	block directory
-// @desc 	imports core blocks
-// @note    blocks are basic elements used to build modules
+/**
+* @name     	Block 
+* @requires     Block files
+*/
 			
 @import 'link';
 @import 'bar';

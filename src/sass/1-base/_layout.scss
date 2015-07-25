@@ -13,12 +13,6 @@ $susy: (
 	gutter-position: split
 );
 
-$skill-layout: (
-  columns: 2,
-  math: static,
-  column-width: 14.375em
-);
-
 @include layout(12);
 @include border-box-sizing;
 
@@ -31,7 +25,6 @@ $skill-layout: (
 .section{
 	position: relative;
 	@include container($main-layout);
-	@include susy-clearfix;
 }
 
 .section__wrapper{

@@ -1,6 +1,6 @@
 /**
 * @name         Social List    
-* @requires     layout.scss
+* @requires     _layout.scss, _vars.scss
 */
 
 .social__list{
@@ -17,7 +17,6 @@
 	@media screen and (min-width:$break-social-sm){
 		@include span(4);
 	}
-	
 	// move third item to its own row for small screens
 	&:nth-of-type(n+3){
 		@include span(12);
@@ -31,12 +30,11 @@
 
 .social__link{
 	padding: 0.625em;
+	font-size: $big-font;
 	border-radius: 50%;
 	border: 2px solid $social-list-color;
-	font-size: $big-font;
-}
-
-.social__link:hover{
-	border-color: $social-hover-color;
-	color: $social-hover-color;	
+	&:hover{
+		border-color: $social-hover-color;
+		color: $social-hover-color;
+	}
 }

@@ -1,6 +1,6 @@
 /**
 * @name         Typography    
-* @requires     _vars.scss
+* @requires     _vars.scss, _layout.scss
 */
 
 /* :: HEADINGS ------------ */
@@ -9,8 +9,7 @@
 .huge, 
 .large, 
 .bigger, 
-.big,
-{
+.big,{
   font-weight: bold;
 }
 
@@ -24,7 +23,6 @@
   font-size: $huge-font;
   line-height: $tiny-line-height;
   letter-spacing: $skinny-letter-spacing;
-
 }
 
 .large{
@@ -71,9 +69,9 @@
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 100%;
-  color: $font-default-color;
-  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
   background-color: $body-bg-color;
+  color: $font-default-color;
 }
 
 .description{

@@ -1,6 +1,6 @@
 /**
 * @name         Form    
-* @requires     _layout.scss
+* @requires     _layout.scss, _vars.scss
 */
 
 .form{
@@ -14,8 +14,8 @@
 }
 
 .form__field, .form__details, .form__submit{
-	border: 3px solid $form-color;
   	padding: 10px;
+  	border: 3px solid $form-color;
 }
 
 .form__fields{
@@ -53,4 +53,3 @@
   	overflow: hidden;
   	resize: none;
 }
-
