@@ -1,5 +1,4 @@
 module.exports = function(grunt) {
-
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		tinypng: {
@@ -43,7 +42,7 @@ module.exports = function(grunt) {
 		watch: {
 			sass: {
 				files: ['src/sass/**/*.scss'],
-				tasks: ['sass:dist']
+				tasks: ['sass:dist', 'autoprefixer']
 			},
 			livereload: {
 				options: {
@@ -65,6 +64,19 @@ module.exports = function(grunt) {
 				tasks: ['concat']
 			}
 		},
+		postcss: {
+            options: {
+                map: true,
+                processors: [
+                    require('autoprefixer-core')({
+                        browsers: ['last 2 versions']
+                    })
+                ]
+            },
+            dist: {
+               	src: 'dist/css/styles.min.css'	
+            } 
+        },
 		sass: {
 			options: {
 				sourceMap: true,
@@ -113,7 +125,8 @@ module.exports = function(grunt) {
 		  	}
 		}
 	});
-
+	
+	grunt.loadNpmTasks('grunt-postcss');
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-image');
 	grunt.loadNpmTasks('grunt-tinypng');

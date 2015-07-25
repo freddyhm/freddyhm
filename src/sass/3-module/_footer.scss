@@ -6,12 +6,16 @@
 /* :: FOOTER NAV ------------ */
 
 .footer__nav{
-  @include container($wide-layout);
   padding: 3em 0;
+  @include container($full-layout);
+  @media screen and (min-width:$break-sm){
+    @include container($wide-layout);
+  }
 }
 
 .footer__nav__list{
   float: left;
+  min-width: 20em;
   text-align: center;
   @media screen and (min-width:$break-sm){
     text-align: left;
@@ -19,9 +23,22 @@
 }
 
 .footer__nav__item{
-  padding-right: 0.95em;
+  @media screen and (min-width:$break-nav-sm){
+    padding-right: 0.5em;
+    &:first-child{
+      padding-left: 0.5em; 
+    }
+  }@media screen and (min-width:$break-sm){
+     padding-right: 1.5em;
+    &:first-child{
+      padding-left: 0; 
+    }
+  }
   @media screen and (min-width:$break-med){
     padding-right: 3em;
+    &:first-child{
+      padding-left: 0; 
+    }
   }
 }
 

@@ -4,8 +4,8 @@
 */
 
 .header{ 
-  padding-top: 2.5em;
-  padding-bottom: 6.2em;
+  padding-top: 4em;
+  padding-bottom: 7.7em;
   @media screen and (min-width:$break-med){
     padding-bottom: 13.2em;
   }
@@ -17,9 +17,12 @@
 }
  
 .header__wrapper{
-  @include container($main-layout);
+  @include container($full-layout);
+  @media screen and (min-width:$break-sm){
+    @include container($medium-layout);
+  }
   @media screen and (min-width:$break-med){
-    @include container($full-layout);
+    @include container($wide-layout);
   } 
 }
 
@@ -46,6 +49,8 @@
   margin-top: 1.5em;
   font-weight: 700;
   @media screen and (min-width:$break-med){
+    font-size: ($large-font - 0.5);
+  }@media screen and (min-width:$break-lrg){
     font-size: $large-font;
   }
 }
@@ -58,6 +63,12 @@
 
 .header__nav{
   min-width: 10.87em;
+  width: 13em;
+  margin: 0 auto;
+  @media screen and (min-width:$break-nav-sm){
+    width: 100%;
+  }
+
   &__list{
       text-align: center;
       @media screen and (min-width:$break-sm){
@@ -69,7 +80,15 @@
   }
 }
 
-.header__nav__item{ 
-  padding-right: 0.95em;
+.header__nav__item{
+  margin-left: 1em;
+  margin-right: 1em;
+  @media screen and (min-width:$break-nav-sm){
+    margin:0;
+    padding-right: 0.95em;
+    &:last-child{
+      padding-right: 0; 
+    }
+  }
 }
 
