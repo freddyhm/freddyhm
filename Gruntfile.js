@@ -42,14 +42,14 @@ module.exports = function(grunt) {
 		watch: {
 			sass: {
 				files: ['src/sass/**/*.scss'],
-				tasks: ['sass:dist', 'autoprefixer']
+				tasks: ['sass:dist', 'postcss']
 			},
 			livereload: {
 				options: {
 					livereload: true,
 					spawn: false
 				},
-				files: ['dist/css/*.css', 'dist/*.html', 'dist/js/**/*.js']
+				files: ['dist/**/*']
 			},
 			html: {
 		    	files: ['src/includes/**/*.html', 'index.html'],
@@ -57,11 +57,15 @@ module.exports = function(grunt) {
 			},
 			vendorjs: {
 				files: ['src/js/vendor/**/*.js'],
-				tasks: ['copy']
+				tasks: ['copy:js']
 			},
 			js: {
-				files: ['src/js/*.js'],
-				tasks: ['concat']
+				files: ['src/js/**/*.js'],
+				tasks: ['process-js']
+			},
+			img: {
+				files: ['src/img/**/*'],
+				tasks: ['copy:img']
 			}
 		},
 		postcss: {
@@ -89,8 +93,14 @@ module.exports = function(grunt) {
 			}
 		},
 		copy: {
-			dist: {
-				src: ['js/vendor/**/*.js', 'img/**/*'],
+			js:{
+				src: ['js/vendor/**/*.js', 'js/custom.min.js'],
+				dest: 'dist',
+				expand: true,
+				cwd: 'src'
+			},
+			img:{
+				src: 'img/**/*',
 				dest: 'dist',
 				expand: true,
 				cwd: 'src'
@@ -99,7 +109,7 @@ module.exports = function(grunt) {
 		concat: {
 		  	js: {
 		    	src: ['src/js/vendor/jquery-1.11.3.js', 'src/js/vendor/slick.js', 'src/js/main.js'],
-		    	dest: 'src/js/custom.js'
+		    	dest: 'src/js/custom.min.js'
 		  	}
 		},
 		uglify: {
@@ -108,7 +118,7 @@ module.exports = function(grunt) {
 		         sourceMap: true
 		      },
 		      files: {
-		         'dist/js/custom.min.js': ['src/js/custom.js'],
+		         'dist/js/custom.min.js': 'src/js/custom.min.js',
 		      }
 		   }
 		},
@@ -137,7 +147,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 
-	grunt.registerTask('setup', ['sass', 'concat', 'uglify', 'includereplace', 'copy']);
-	grunt.registerTask('js', ['concat', 'uglify', 'copy']);
+	grunt.registerTask('setup', ['sass', 'concat', 'includereplace', 'copy']);
+	grunt.registerTask('process-js', ['concat', 'copy:js']);
 	grunt.registerTask('default', ['watch']);
 };

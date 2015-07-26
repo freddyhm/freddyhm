@@ -2,14 +2,14 @@
 * @name         Header
 * @requires     _layout.scss, _vars.scss
 */
-
+ 
 .header{ 
   padding-top: 4em;
   padding-bottom: 7.7em;
   @media screen and (min-width:$break-med){
     padding-bottom: 13.2em;
   }
-}
+} 
 
 .header__title,
 .header__subtitle{

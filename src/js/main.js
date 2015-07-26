@@ -2,11 +2,13 @@
 $(function(){
 
   $(".testimonial__slider").slick({
+    dots: true,  
     prevArrow: ".testimonial__control--prev",
     nextArrow: ".testimonial__control--next"
   });
 
   $(".detail__slider").slick({
+    dots: true,  
     prevArrow: ".detail__control--prev",
     nextArrow: ".detail__control--next"
   });
@@ -14,7 +16,7 @@ $(function(){
   var workItems = document.querySelectorAll('.gallery__item');
 
   // write in plain javascript later 
-  $('.gallery__item').click(function(event) {
+  $('.gallery__item').click(function(event) { 
 
     // hide our thumbs and show our work description
     $('.page-slider__first').addClass("page-slider__first--hide");
@@ -62,6 +64,7 @@ $(function(){
         });  
 
         $(".detail__slider").slick({
+          dots: true,  
           prevArrow: ".detail__control--prev",
           nextArrow: ".detail__control--next"
         });
@@ -93,7 +96,7 @@ $(function(){
     var client = prevClient();
     $('.client-logo-item').filter("[data-client='" + client + "']").addClass('client-logo-item-active');
     $('.client-item').filter("[data-client='" + client + "']").addClass('client-item-active');
-  });
+  }); 
 
   $('.control-next').click(function(event) {
 
@@ -107,10 +110,10 @@ $(function(){
     $('.client-item').filter("[data-client='" + client + "']").addClass('client-item-active');
   });
 
-  function prevClient(){
+  function prevClient(){  
 
     // decrement counter
-    clientIndex--;
+    clientIndex--; 
 
     // reset index to last client if index falls to negative
     if(clientIndex < 0){

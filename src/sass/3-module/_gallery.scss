@@ -40,3 +40,9 @@
     position: relative;
   }
 }
+
+/* :: NO JS ------------ */
+
+.no-js .gallery__title{ 
+  display: block;
+}
