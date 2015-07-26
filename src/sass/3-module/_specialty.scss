@@ -3,11 +3,11 @@
 * @requires     _layout.scss, _vars.scss
 */
 
-.specialty{
+.no-flexbox .specialty{
 	@include susy-clearfix;
 }
 
-.specialty__item{
+.no-flexbox .specialty__item{
 	@include span(6); 
 	margin-top: 3.125em;
 	text-align: center;
@@ -16,7 +16,7 @@
 	}
 }
 
-.item__pencil{
+.no-flexbox .item__pencil{
 	margin-top: 3.725em;
 }
 
@@ -28,3 +28,55 @@
 	margin-top: 2.5em;
 }
 
+/* :: FLEXBOX ------------ */
+
+.flexbox .specialty{
+	display: block;
+	text-align: center;
+	@media screen and (min-width: $break-skill-med){
+		margin: 0 auto;
+		max-width: 800px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+
+.flexbox .specialty__item{
+	margin: 10px 9%;
+	width: 100px;
+	height: 100px;
+	display: inline-block;
+	@media screen and (min-width: $break-skill-med){
+		margin: 0;
+		display: inline;
+	}
+}
+
+.flexbox .item__mobile{
+	order: 1;
+}
+
+.flexbox .item__laptop{
+	order: 4;
+}
+
+.flexbox .specialty > .face{
+	display: block;
+	margin: 0 auto;
+	@media screen and (min-width: $break-skill-med){
+		margin: 0;
+		order: 3;
+	}
+}
+
+.flexbox .item__pencil{
+	order: 2;
+	@media screen and (min-width: $break-skill-med){
+		margin-top: 0.6em;
+	}
+}
+
+.flexbox .item__lightbulb{
+	order: 5;
+}
