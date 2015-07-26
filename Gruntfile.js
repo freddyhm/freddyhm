@@ -42,7 +42,7 @@ module.exports = function(grunt) {
 		watch: {
 			sass: {
 				files: ['src/sass/**/*.scss'],
-				tasks: ['sass:dist', 'postcss']
+				tasks: ['sass']
 			},
 			livereload: {
 				options: {
@@ -82,10 +82,6 @@ module.exports = function(grunt) {
             } 
         },
 		sass: {
-			options: {
-				sourceMap: true,
-				outputStyle: 'compressed'
-			},
 			dist: {
 				files: {
 					'dist/css/styles.min.css': 'src/sass/all.scss'
@@ -135,7 +131,7 @@ module.exports = function(grunt) {
 		  	}
 		}
 	});
-	
+
 	grunt.loadNpmTasks('grunt-postcss');
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-image');
@@ -149,5 +145,7 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('setup', ['sass', 'concat', 'includereplace', 'copy']);
 	grunt.registerTask('process-js', ['concat', 'copy:js']);
+	grunt.registerTask('prod-setup', ['sass', 'postcss', 'concat', 'uglify', 'includereplace', 'copy']);
+
 	grunt.registerTask('default', ['watch']);
 };

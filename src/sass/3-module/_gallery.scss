@@ -15,7 +15,7 @@
 }
 
 .gallery__list{
-  margin: 0 auto;
+  margin: 3em auto;
 }
 
 .gallery__media{
@@ -35,9 +35,14 @@
 }
 
 .gallery__item{
+  margin-top: 3em;
   @media screen and (min-width:$break-lrg){
     @include span(4);
+    margin-top: 0;
     position: relative;
+  }
+  &:first-of-type{
+    margin-top: 0;
   }
 }
 

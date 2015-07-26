@@ -16,13 +16,11 @@
   left: 0;
   top: 0;
   z-index: 10;
-  max-width: $gallery-media-width;
   width: 100%;
   height: 100%;
   text-align: center;
   transition: transform 0.2s ease;
   transform: scale(0, 0);
-  background-color: gray;
   background-color: $overlay-color;
   &--over{
     @media screen and (min-width:$break-lrg){
