@@ -19,6 +19,9 @@
     -ms-touch-action: pan-y;
     touch-action: pan-y;
     -webkit-tap-highlight-color: transparent;
+    &:focus{
+        outline: none;
+    }
 }
 .slick-list {
     position: relative;
@@ -32,6 +35,7 @@
     }
 
     &.dragging {
+        outline: none;
         cursor: pointer;
         cursor: hand;
     }

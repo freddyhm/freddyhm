@@ -8,6 +8,7 @@
 $pot-pourri: #F1E2D6;
 $dusty-gray: #999999;
 $sirocco: #738685;
+$teal-blue: #02394E;
 $dove-gray: #666666;
 $gray-chateau: #A0A5A8;
 $ziggurat: #B8D5DB;
@@ -17,6 +18,7 @@ $astral: #3779A0;
 $white:  #fff;
 $gray:   #aaa;
 $black:  #111;
+$teal-blue: #02394E;
 
 
 // Sections
@@ -26,7 +28,9 @@ $font-default-color: $dove-gray;
 $title-color: $sirocco;
 
 // Links
-$link-color: $sirocco;
+$link-color: $sirocco; 
+$text-link-color: $horizon;
+$text-link-color-hover: $teal-blue;
 
 // Titles
 $light-title-color: $white;

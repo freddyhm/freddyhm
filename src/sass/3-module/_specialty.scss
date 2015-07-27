@@ -31,7 +31,7 @@
 /* :: FLEXBOX ------------ */
 
 .flexbox .specialty__description{
-	margin-top: 0.5em;
+	margin-top: 2.5em;
 	margin-bottom: 3.5em;
 	@media screen and (min-width: $break-skill-med){
 		margin-top: 2.5em;
@@ -53,8 +53,8 @@
 .flexbox .specialty__item{
 	display: inline-block;
 	margin: 0.625em 9%;
-	width: 6.25em;
-	height: 6.25em;
+	width: 4.375em;
+	height: 4.375em;
 	@media screen and (min-width: $break-skill-med){
 		margin: 0;
 		display: inline;

@@ -10,9 +10,9 @@ module.exports = function(grunt) {
 		    },
 		    compress: {
 		        expand: true, 
-		        src: ['**/*.{png,jpg}'], 
-		        cwd: 'src/img/',
-		        dest: 'src/img/'
+		        src: ['face-justin.jpg'], 
+		        cwd: 'src/img/testimonial/',
+		        dest: 'src/img/testimonial/'
 		    }
     	},
 		responsive_images: {
@@ -21,21 +21,16 @@ module.exports = function(grunt) {
 	          engine: 'im',
 	          aspectRatio: false,
 	          sizes: [{
-	            width: 320,
-	            height: 160,
+	            width: 100,
 	            suffix: '-sm'
-	          },{
-	            width: 600,
-	            height: 375,
-	            suffix: '-med'
 	          }
 	          ]
 	        },
 	        files: [{
 	          expand: true,
-	          src: ['thumb.jpg'],
-	          cwd: 'src/img/work/proj-3/',
-	          dest: 'src/img/work/proj-3/'
+	          src: ['face-justin.jpg'],
+	          cwd: 'src/img/testimonial/',
+	          dest: 'src/img/testimonial/'
 	        }]
 	      }
 	    },
@@ -82,6 +77,10 @@ module.exports = function(grunt) {
             } 
         },
 		sass: {
+			options: {
+		         sourceMap: true,
+		         outputStyle: 'compressed'
+		    },
 			dist: {
 				files: {
 					'dist/css/styles.min.css': 'src/sass/all.scss'
@@ -90,7 +89,7 @@ module.exports = function(grunt) {
 		},
 		copy: {
 			js:{
-				src: ['js/vendor/**/*.js', 'js/custom.min.js'],
+				src: ['js/vendor/modernizr.js'],
 				dest: 'dist',
 				expand: true,
 				cwd: 'src'
@@ -129,7 +128,23 @@ module.exports = function(grunt) {
 		    	src: ['*.html'],
 		    	dest: 'dist/'
 		  	}
-		}
+		},
+		  environments: {
+		      options: {
+		        local_path: 'dist',
+		        current_symlink: 'current',
+		        deploy_path: '/home/fhm/public_html',
+		        releases_to_keep: 1
+		      },
+		      production: {
+		          options: {
+		              host: 'freddyhm.com',
+		              username: '--',
+		              password: '--',
+		              port: 2222
+		          }
+		      }
+		  }
 	});
 
 	grunt.loadNpmTasks('grunt-postcss');
@@ -138,6 +153,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-tinypng');
 	grunt.loadNpmTasks('grunt-responsive-images');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-ssh-deploy');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-include-replace');
 	grunt.loadNpmTasks('grunt-contrib-copy');

@@ -1,4 +1,5 @@
 /dist
 .DS_Store
 .sass-cache
+flightplan.js
 /node_modules

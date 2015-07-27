@@ -31,6 +31,12 @@
   margin-top: 2em;
 }
 
+.detail__item{
+  &:focus{
+    outline: none;
+  }
+}
+
 /* :: TYPOGRAPHY ------------ */
 
 .detail__title{
@@ -75,7 +81,7 @@
   display: list-item;
   font-weight: $light;
   width: 14em;
-  margin:0 auto;
+  margin: 1em auto;
   &:before{
     content: "- ";
   }
@@ -83,7 +89,7 @@
 
 .press__item, .tool__item{
   width: 32%;
-}
+} 
 
 /* :: TEAMSTORY MEDIA ------------ */
 
@@ -108,9 +114,15 @@
   width: 100%;
 }
 
+/* :: ONESHOP MEDIA ------------ */
+
+.bigcom__img, .php__img{
+  width: 80px;
+}
+
 /* :: NO JS ------------ */
 
-.no-js .detail__slide{
+.no-js .detail__item{
   margin: 2em 0;
 }
 
