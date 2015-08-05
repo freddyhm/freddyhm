@@ -129,22 +129,23 @@ module.exports = function(grunt) {
 		    	dest: 'dist/'
 		  	}
 		},
-		  environments: {
+	    git_deploy: {
+		    your_target: {
 		      options: {
-		        local_path: 'dist',
-		        current_symlink: 'current',
-		        deploy_path: '/home/fhm/public_html',
-		        releases_to_keep: 1
+		        url: 'git@github.com:freddyhm/freddyhm.git',
+		        branch: 'production'
 		      },
-		      production: {
-		          options: {
-		              host: 'freddyhm.com',
-		              username: '--',
-		              password: '--',
-		              port: 2222
-		          }
-		      }
-		  }
+		      src: 'dist/',
+		    },
+		 },
+		 shell: {
+	        deploy: {
+	            command: [
+	                'cd dist/',
+	                'git push live'
+	            ].join('&&')
+	        }
+	    },
 	});
 
 	grunt.loadNpmTasks('grunt-postcss');
@@ -161,7 +162,8 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('setup', ['sass', 'concat', 'includereplace', 'copy']);
 	grunt.registerTask('process-js', ['concat', 'copy:js']);
-	grunt.registerTask('prod-setup', ['sass', 'postcss', 'concat', 'uglify', 'includereplace', 'copy']);
+	grunt.registerTask('prod-setup', ['sass', 'postcss', 'concat', 'uglify', 'includereplace', 'copy', '']);
+	grunt.registerTask('deploy', ['sass', 'postcss', 'concat', 'uglify', 'includereplace', 'copy', 'git_deploy', 'shell:deploy']);
 
 	grunt.registerTask('default', ['watch']);
 };
