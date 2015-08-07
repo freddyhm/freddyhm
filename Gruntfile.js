@@ -129,15 +129,20 @@ module.exports = function(grunt) {
 		    	dest: 'dist/'
 		  	}
 		},
-	    git_deploy: {
-		    your_target: {
-		      options: {
-		        url: 'git@github.com:freddyhm/freddyhm.git',
-		        branch: 'production'
-		      },
-		      src: 'dist/',
+	    buildcontrol: {
+		    options: {
+		      dir: 'dist',
+		      commit: true,
+		      push: true,
+		      message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
 		    },
-		 },
+		    production: {
+		      options: {
+		        remote: 'git@github.com:freddyhm/freddyhm.git',
+		        branch: 'production'
+		      }
+		    }
+		},
 		 shell: {
 	        deploy: {
 	            command: [
@@ -145,7 +150,7 @@ module.exports = function(grunt) {
 	                'git push live'
 	            ].join('&&')
 	        }
-	    },
+	    }
 	});
 
 	grunt.loadNpmTasks('grunt-postcss');
@@ -159,11 +164,12 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-include-replace');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-build-control');
 
 	grunt.registerTask('setup', ['sass', 'concat', 'includereplace', 'copy']);
 	grunt.registerTask('process-js', ['concat', 'copy:js']);
-	grunt.registerTask('prod-setup', ['sass', 'postcss', 'concat', 'uglify', 'includereplace', 'copy', '']);
-	grunt.registerTask('deploy', ['sass', 'postcss', 'concat', 'uglify', 'includereplace', 'copy', 'git_deploy', 'shell:deploy']);
+	grunt.registerTask('prod-setup', ['sass', 'postcss', 'concat', 'uglify', 'includereplace', 'copy']);
+	grunt.registerTask('deploy', ['sass', 'postcss', 'concat', 'uglify', 'includereplace', 'copy', 'git_deploy', 'buildcontrol:production', 'shell:deploy']);
 
 	grunt.registerTask('default', ['watch']);
 };
